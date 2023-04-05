@@ -85,9 +85,12 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
   background-color: #e2f5f8;
   font-family: "Gotham";
+}
+
+.container {
+  max-width: 1240px;
 }
 
 header {
@@ -97,16 +100,135 @@ header {
   background-color: #d0c6c6;
   width: 100%;
 }
-header .header-container {
+header .social-media {
+  background-color: #a28e8e;
+  font-size: 13px;
+}
+header .social-media .container {
+  display: flex;
+  flex-direction: row-reverse;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   margin: 0 auto;
-  max-width: 1624px;
-  padding: 10px 40px;
+  padding: 0 40px;
+}
+header .social-media .language-block-wrapper {
+  position: relative;
+  width: 40px;
+}
+header .social-media .language-block-wrapper .language-block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  position: absolute;
+  top: 5px;
+}
+header .social-media .language-block-wrapper .language-block > ::after {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  content: "";
+  border-top: 5px solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  cursor: pointer;
+}
+header .social-media .language-block-wrapper .language-block:hover > ::after {
+  border-top-color: #a9883b;
+}
+header .social-media .language-block-wrapper .language-block .flag-item {
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  background-color: #a28e8e;
+  padding-right: 15px;
+}
+header .social-media .language-block-wrapper .language-block .flag-item div {
+  height: 30px;
+  width: 40px;
+}
+header .social-media .language-block-wrapper .language-block .flag-item div svg {
+  height: 100%;
+  width: 100%;
+}
+header .social-media .language-block-wrapper .language-block .flag-item.dropdown-lang {
+  display: none;
+}
+header .social-media .language-block-wrapper .language-block .flag-item:hover {
+  background-color: #b9aaaa;
+}
+header .social-media .language-block-wrapper .language-block:hover .dropdown-lang {
+  display: block;
+}
+header .social-media span svg {
+  height: 40px;
+  width: 40px;
+  padding: 5px 0;
+  filter: grayscale(0.6);
+  transition: all 0.16s ease-in-out;
+}
+header .social-media span svg:hover {
+  filter: none;
+}
+header .social-media .contact-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-right: 15px;
+}
+header .social-media .contact-icon.has-children::after {
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  content: "";
+  border-top: 5px solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+header .social-media .contact-icon.as-children:hover::after {
+  border-top: 5px solid #d0c6c6;
+}
+header .social-media .contact-icon a {
   display: flex;
   align-items: center;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+}
+header .social-media .contact-icon a.tel {
+  font-size: 13px;
+  font-style: italic;
+}
+header .social-media .contact-icon a.tel:hover span {
+  background-color: #d0c6c6;
+}
+header .social-media .contact-icon a.main-tel .svg-span {
+  padding-right: 5px;
+  background-color: #a28e8e !important;
+}
+header .social-media .contact-icon div.additional-tels {
+  display: none;
+  position: absolute;
+  top: 40px;
+  background: #beb0b0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.783);
+  min-width: 220px;
+  padding: 10px 20px 10px 35px;
+}
+header .social-media .contact-icon:hover div.additional-tels {
+  display: block;
+}
+header .social-media .contact-icon:hover .main-tel .svg-span svg {
+  filter: none !important;
+}
+header .header-container {
+  margin: 0 auto;
+  padding: 10px 40px 10px;
+  display: grid;
+  grid-template-areas: "logo menu lang";
+  align-items: center;
+  justify-content: space-between;
 }
 header .header-container .logo {
+  grid-area: logo;
   height: 120px;
   display: block;
 }
@@ -114,6 +236,7 @@ header .header-container .logo img {
   height: 100%;
 }
 header .header-container .menu {
+  grid-area: menu;
   flex: 1;
   font-size: 18px;
 }
@@ -198,64 +321,6 @@ header .header-container .menu ul li.menu-item-dropdown-wrapper .menu-item-dropd
 }
 header .header-container .menu ul li.menu-item-dropdown-wrapper .menu-item-dropdown .dropdown-content .sub-item:hover {
   background-color: #eeedee;
-}
-header .header-container .social-media {
-  display: flex;
-}
-header .header-container .social-media .social-media-icon span svg {
-  height: 40px;
-  width: 40px;
-  filter: grayscale(0.6);
-  transition: all 0.16s ease-in-out;
-}
-header .header-container .social-media .social-media-icon span svg:hover {
-  filter: none;
-}
-header .header-container .language-block-wrapper {
-  position: relative;
-  width: 40px;
-}
-header .header-container .language-block-wrapper .language-block {
-  display: flex;
-  flex-direction: column;
-  row-gap: 5px;
-  position: absolute;
-  top: -20px;
-}
-header .header-container .language-block-wrapper .language-block > ::after {
-  position: absolute;
-  right: 5px;
-  top: 10px;
-  content: "";
-  border-top: 5px solid black;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  cursor: pointer;
-}
-header .header-container .language-block-wrapper .language-block:hover > ::after {
-  border-top-color: #a9883b;
-}
-header .header-container .language-block-wrapper .language-block .flag-item {
-  border: 1px solid rgba(0, 0, 0, 0.32);
-  background-color: #d0c6c6;
-  padding-right: 15px;
-}
-header .header-container .language-block-wrapper .language-block .flag-item div {
-  height: 30px;
-  width: 40px;
-}
-header .header-container .language-block-wrapper .language-block .flag-item div svg {
-  height: 100%;
-  width: 100%;
-}
-header .header-container .language-block-wrapper .language-block .flag-item.dropdown-lang {
-  display: none;
-}
-header .header-container .language-block-wrapper .language-block .flag-item:hover {
-  background-color: #e7e2e2;
-}
-header .header-container .language-block-wrapper .language-block:hover .dropdown-lang {
-  display: block;
 }
 
 .wrapper {
