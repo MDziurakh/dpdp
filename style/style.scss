@@ -1,5 +1,8 @@
 @import 'fonts';
 
+$large-screen: 1240px;
+$tablet-screen:992px;
+
 *,
 *::before,
 *::after {
@@ -39,13 +42,16 @@ body {
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
-    line-height: 1.5;
     background-color: #e2f5f8;
     font-family: 'Gotham';
 }
 
-$large-screen: 1624px;
-$tablet-screen:992px;
+.container{
+    
+    max-width: $large-screen;
+}
+
+
 
 //imports 
 @import 'header';

@@ -1,5 +1,6 @@
 $hover_color: #a9883b;
 $header-color: #d0c6c6;
+$contacts-color:darken($color: $header-color, $amount: 20);
 
 $header-height: 120px;
 
@@ -10,28 +11,232 @@ header {
     background-color: $header-color;
     width: 100%;
 
+    .social-media {
+        background-color: $contacts-color;
+        font-size: 13px;
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            column-gap: 10px;
+            margin: 0 auto;
+            padding: 0 40px;
+
+        }
+
+        .language-block-wrapper {
+
+            // grid-area: lang;
+            position: relative;
+            width: 40px;
+
+            .language-block {
+                display: flex;
+                flex-direction: column;
+                row-gap: 5px;
+                position: absolute;
+                top: 5px;
+                // right: 0;
+
+                >::after {
+                    position: absolute;
+                    right: 5px;
+                    top: 10px;
+                    content: '';
+                    border-top: 5px solid black;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    cursor: pointer;
+
+                }
+
+                &:hover>::after {
+                    border-top-color: $hover_color;
+
+                }
+
+                .flag-item {
+                    border: 1px solid rgba(0, 0, 0, 0.32);
+                    background-color: $contacts-color;
+                    padding-right: 15px;
+
+                    div {
+                        height: 30px;
+                        width: 40px;
+
+                        svg {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+
+                    // &.current-lang {}
+
+                    &.dropdown-lang {
+                        display: none;
+                    }
+
+                    &:hover {
+                        background-color: lighten($color: $contacts-color, $amount: 10);
+                    }
+                }
+
+                &:hover {
+
+                    .dropdown-lang {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        span {
+            svg {
+                height: 40px;
+                width: 40px;
+                padding: 5px 0;
+                filter: grayscale(0.6);
+                transition: all 0.16s ease-in-out;
+
+                &:hover {
+                    filter: none;
+                }
+            }
+        }
+        .social-media-icon {
+
+            // span {
+            //     svg {
+            //         height: 40px;
+            //         width: 40px;
+            //         filter: grayscale(0.6);
+            //         transition: all 0.16s ease-in-out;
+
+            //         &:hover {
+            //             filter: none;
+            //         }
+            //     }
+            // }
+        }
+
+        .contact-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            padding-right: 15px;
+            &.location{
+                // flex: 1;
+            }
+
+            &.has-children::after {
+                position: absolute;
+                right: 0px;
+                top: 20px;
+                content: '';
+                border-top: 5px solid black;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                cursor: pointer;
+                transition: all 0.25s ease-in-out;
+
+            }
+
+            &.as-children:hover::after {
+                border-top: 5px solid $header-color;
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+
+                &.tel {
+                    font-size: 13px;
+                    font-style: italic;
+                    &:hover{
+                        span{
+
+                            background-color: lighten($color: $contacts-color, $amount: 20);
+                        }
+                      }  
+                }
+
+                
+                &.main-tel {
+                    
+                    .svg-span {
+                        padding-right: 5px;
+                        background-color: $contacts-color !important;
+                        // svg {   
+                        //     height: 40px;
+                        //     width: 40px;
+                        //     filter: grayscale(0.6);
+                        //     transition: all 0.16s ease-in-out;
+
+                        //     &:hover {
+                        //         filter: none;
+                        //     }
+                        // }
+                    }
+                }
+            }
+
+            div.additional-tels {
+                display: none;
+                position: absolute;
+                top: 40px;
+                background: lighten($color: $contacts-color, $amount: 12);
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.783);
+                min-width: 220px;
+                padding: 10px 20px 10px 35px;
+
+                a {
+                  
+                }
+            }
+
+
+            &:hover {
+                div.additional-tels {
+                    display: block;
+                }
+                .main-tel {
+
+                    .svg-span {
+                        svg {   
+                            filter: none !important;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .header-container {
         margin: 0 auto;
-        max-width: $large-screen;
-        padding: 10px 40px;
-        display: flex;
+        padding: 10px 40px 10px;
+        display: grid;
+        grid-template-areas:
+            'logo menu lang';
         align-items: center;
-        column-gap: 20px;
+        justify-content: space-between;
 
         .logo {
+            grid-area: logo;
             height: $header-height;
             display: block;
 
             img {
                 height: 100%;
-                // width: 100%;
             }
         }
 
         .menu {
+
+            grid-area: menu;
             flex: 1;
             font-size: 18px;
-            // font-weight: medium;
+
             ul {
                 display: flex;
                 justify-content: center;
@@ -107,7 +312,7 @@ header {
                                 left: 0px;
                                 top: 5px;
                                 position: absolute;
-                                
+
                             }
 
                             .dropdown-content {
@@ -140,86 +345,5 @@ header {
             }
         }
 
-        .social-media {
-            display: flex;
-
-            .social-media-icon {
-                span {
-                    svg {
-                        height: 40px;
-                        width: 40px;
-                        filter: grayscale(0.6);
-                        transition: all 0.16s ease-in-out;
-
-                        &:hover {
-                            filter: none;
-                        }
-                    }
-                }
-            }
-        }
-
-        .language-block-wrapper {
-            position: relative;
-            width: 40px;
-
-            .language-block {
-                display: flex;
-                flex-direction: column;
-                row-gap: 5px;
-                position: absolute;
-                top: -20px;
-
-                >::after {
-                    position: absolute;
-                    right: 5px;
-                    top: 10px;
-                    content: '';
-                    border-top: 5px solid black;
-                    border-left: 5px solid transparent;
-                    border-right: 5px solid transparent;
-                    cursor: pointer;
-
-                }
-
-                &:hover>::after {
-                    border-top-color: $hover_color;
-
-                }
-
-                .flag-item {
-                    border: 1px solid rgba(0, 0, 0, 0.32);
-                    background-color: $header-color;
-                    padding-right: 15px;
-
-                    div {
-                        height: 30px;
-                        width: 40px;
-
-                        svg {
-                            height: 100%;
-                            width: 100%;
-                        }
-                    }
-
-                    &.current-lang {}
-
-                    &.dropdown-lang {
-                        display: none;
-                    }
-
-                    &:hover {
-                        background-color: lighten($color: $header-color, $amount: 10);
-                    }
-                }
-
-                &:hover {
-
-                    .dropdown-lang {
-                        display: block;
-                    }
-                }
-            }
-        }
     }
 }
