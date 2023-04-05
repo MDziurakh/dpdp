@@ -1,0 +1,57 @@
+@import 'fonts';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: #e2f5f8;
+    font-family: 'Gotham';
+}
+
+$large-screen: 1824px;
+
+$header-height: 120px;
+
+//imports 
+@import 'header';
+
+.wrapper {
+    // max-width: $large-screen;
+    margin: ($header-height+20px) auto 0;
+}
