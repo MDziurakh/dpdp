@@ -1,12 +1,13 @@
 $hover_color: #a9883b;
 $header-color: #d0c6c6;
 
+$header-height: 120px;
+
 header {
     position: fixed;
     top: 0;
     z-index: 3;
     background-color: $header-color;
-    // color: #e4d196;
     width: 100%;
 
     .header-container {
@@ -18,7 +19,6 @@ header {
         column-gap: 20px;
 
         .logo {
-            flex-basis: 300px;
             height: $header-height;
             display: block;
 
@@ -30,13 +30,21 @@ header {
 
         .menu {
             flex: 1;
-
+            font-size: 18px;
+            // font-weight: medium;
             ul {
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: center;
+                align-items: center;
+                column-gap: 50px;
+
+                @media (max-width:1100px) {
+                    column-gap: 18px;
+
+                }
 
                 li {
-                    text-transform: uppercase;
+                    text-transform: capitalize;
 
 
                     a.menu-item {
@@ -44,37 +52,38 @@ header {
                         cursor: pointer;
                         border-top: 2px solid transparent;
                         transition: all 0.25s ease-in-out;
+                        font-weight: 500;
 
 
                         &:hover {
                             color: $hover_color;
-                            // transition: all 0.25s ease-in-out;
                             border-top: 2px solid $hover_color;
-                            // text-shadow: #a9883b 0 0 1px;
                         }
                     }
 
                     &.menu-item-dropdown-wrapper {
                         position: relative;
+                        padding-right: 25px;
 
-                        >::after {
-                            transition: all 0.25s ease-in-out;
+                        &::after {
                             position: absolute;
-                            right: -25px;
-                            top: 5px;
+                            right: 0px;
+                            top: 10px;
                             content: '';
-                            border-top: 10px solid black;
-                            border-left: 10px solid transparent;
-                            border-right: 10px solid transparent;
+                            border-top: 7px solid black;
+                            border-left: 7px solid transparent;
+                            border-right: 7px solid transparent;
                             cursor: pointer;
+                            transition: all 0.25s ease-in-out;
 
                         }
 
+                        &:hover::after {
+
+                            border-top: 7px solid $hover_color;
+                        }
+
                         &:hover {
-                            >::after {
-                                border-top: 10px solid $hover_color;
-                                // transform: rotate(180deg);
-                            }
 
                             .menu-item-dropdown {
                                 cursor: pointer;
@@ -94,12 +103,11 @@ header {
 
                             .dropdown-content-wrapper {
                                 padding: 18px 0;
-                                // visibility: hidden;
-                                width: 170%;
-                                left: -15px;
+                                width: 115%;
+                                left: 0px;
                                 top: 5px;
                                 position: absolute;
-                                // background-color: red;
+                                
                             }
 
                             .dropdown-content {
@@ -116,7 +124,6 @@ header {
                                 flex-direction: column;
                                 row-gap: 10px;
 
-                                // transition: all 0.25s ease-in; 
                                 .sub-item {
                                     transition: background-color 0.2s ease-in-out;
 
@@ -141,7 +148,7 @@ header {
                     svg {
                         height: 40px;
                         width: 40px;
-                        filter: grayscale(1);
+                        filter: grayscale(0.6);
                         transition: all 0.16s ease-in-out;
 
                         &:hover {

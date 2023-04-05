@@ -44,9 +44,8 @@ body {
     font-family: 'Gotham';
 }
 
-$large-screen: 1824px;
-
-$header-height: 120px;
+$large-screen: 1624px;
+$tablet-screen:992px;
 
 //imports 
 @import 'header';
