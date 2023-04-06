@@ -1,6 +1,6 @@
 $hover_color: #a9883b;
 $header-color: #d0c6c6;
-$contacts-color:darken($color: $header-color, $amount: 20);
+$contacts-color: darken($color: $header-color, $amount: 20);
 
 $header-height: 120px;
 
@@ -14,18 +14,28 @@ header {
     .social-media {
         background-color: $contacts-color;
         font-size: 13px;
+
         .container {
             display: flex;
-            flex-direction: row-reverse;
+            justify-content: flex-end;
             column-gap: 10px;
             margin: 0 auto;
             padding: 0 40px;
 
+            >.social-media-icon {
+                padding-left: 40px;
+            }
+
+            >.social-media-icon~.social-media-icon {
+                padding-left: 0;
+            }
+
+            >div:last-of-type {
+                padding: 0 40px;
+            }
         }
 
         .language-block-wrapper {
-
-            // grid-area: lang;
             position: relative;
             width: 40px;
 
@@ -35,7 +45,8 @@ header {
                 row-gap: 5px;
                 position: absolute;
                 top: 5px;
-                // right: 0;
+                left: 20px;
+                cursor: pointer;
 
                 >::after {
                     position: absolute;
@@ -45,13 +56,11 @@ header {
                     border-top: 5px solid black;
                     border-left: 5px solid transparent;
                     border-right: 5px solid transparent;
-                    cursor: pointer;
-
+                    pointer-events: none;
                 }
 
                 &:hover>::after {
                     border-top-color: $hover_color;
-
                 }
 
                 .flag-item {
@@ -102,35 +111,30 @@ header {
                 }
             }
         }
-        .social-media-icon {
-
-            // span {
-            //     svg {
-            //         height: 40px;
-            //         width: 40px;
-            //         filter: grayscale(0.6);
-            //         transition: all 0.16s ease-in-out;
-
-            //         &:hover {
-            //             filter: none;
-            //         }
-            //     }
-            // }
-        }
-
+        // .social-media-icon {}
         .contact-icon {
             display: flex;
             flex-direction: column;
             justify-content: center;
             position: relative;
-            padding-right: 15px;
-            &.location{
+            padding-right: 40px;
+
+            &.location-block {
                 // flex: 1;
+                span.location{
+                    // width: max-content;
+                    @media(max-width: 1100px){
+                    max-width: 260px;   
+                    }
+                }
+            }
+            &.has-children{
+                padding-right: 45px;
             }
 
             &.has-children::after {
                 position: absolute;
-                right: 0px;
+                right: 10px;
                 top: 20px;
                 content: '';
                 border-top: 5px solid black;
@@ -149,20 +153,24 @@ header {
                 display: flex;
                 align-items: center;
 
-                &.tel {
+                &.tel-link {
                     font-size: 13px;
                     font-style: italic;
-                    &:hover{
-                        span{
+
+                    &:hover {
+                        span {
 
                             background-color: lighten($color: $contacts-color, $amount: 20);
                         }
-                      }  
+                    }
+                }
+                span.tel{
+                    width: max-content;
                 }
 
-                
+
                 &.main-tel {
-                    
+
                     .svg-span {
                         padding-right: 5px;
                         background-color: $contacts-color !important;
@@ -183,15 +191,14 @@ header {
             div.additional-tels {
                 display: none;
                 position: absolute;
-                top: 40px;
+                top: 44px;
                 background: lighten($color: $contacts-color, $amount: 12);
                 box-shadow: 0 1px 5px rgba(0, 0, 0, 0.783);
-                min-width: 220px;
+                // min-width: 220px;
+                width: 100%;
                 padding: 10px 20px 10px 35px;
 
-                a {
-                  
-                }
+                a {}
             }
 
 
@@ -199,12 +206,13 @@ header {
                 div.additional-tels {
                     display: block;
                 }
+
                 .main-tel {
 
                     .svg-span {
-                        svg {   
+                        svg {
                             filter: none !important;
-                            
+
                         }
                     }
                 }
@@ -268,11 +276,11 @@ header {
 
                     &.menu-item-dropdown-wrapper {
                         position: relative;
-                        padding-right: 25px;
+                        padding-right: 35px;
 
                         &::after {
                             position: absolute;
-                            right: 0px;
+                            right: 10px;
                             top: 10px;
                             content: '';
                             border-top: 7px solid black;
