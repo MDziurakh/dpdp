@@ -7,7 +7,7 @@
         height: calc(100vh - $total-header-height);
 
         @media (min-width:1601px) {
-           max-height: 1100px;
+            max-height: 1100px;
         }
 
 
@@ -16,11 +16,14 @@
         }
 
         [class^="swiper-button-"] {
-            width: 40px;
+            width: 50px;
             height: auto;
         }
 
         .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             background-image: url('../assets/images/main-slider/founders.png');
             background-image: url('../assets/images/main-slider/founders.webp');
@@ -29,6 +32,43 @@
 
             &.second-slide {
                 background-image: url('../assets/images/main-slider/poster.png');
+            }
+        }
+
+
+        .slider-caption {
+            position: relative;
+            a {
+                h2 {
+                    text-align: center;
+                    margin: 0 auto;
+                    max-width: 380px;
+                    padding: 10px 30px;
+                    background: rgba(236, 232, 232, 0.5);
+                    border: 2px solid #fff;
+                    font-size: 20px;
+                    font-weight: 400;
+                }
+            }
+            &>::after{
+                content: "";
+                display: block;
+                width: 30%;
+                height: 1px;
+                background: #f8f8f8;
+                left: calc(100% + 10px);
+                top: 50%;
+                position: absolute;
+            }
+            &>::before{
+                content: "";
+                display: block;
+                width: 30%;
+                height: 1px;
+                background: #f8f8f8;
+                left: calc(-30% - 10px);
+                top: 50%;
+                position: absolute;
             }
         }
     }
