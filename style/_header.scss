@@ -17,7 +17,7 @@ header {
             display: flex;
             justify-content: flex-end;
             column-gap: 10px;
-            
+
 
             @media(max-width: 1140px) {
                 font-size: 11px !important;
@@ -61,14 +61,9 @@ header {
             padding-right: 20px;
             cursor: pointer;
 
-            
             &.location-block {
-
-                // flex: 1;
                 span.location {
-                    // width: max-content;
                     max-width: 220px;
-
                 }
             }
 
@@ -127,10 +122,8 @@ header {
                 top: 44px;
                 background: lighten($color: $contacts-color, $amount: 12);
                 box-shadow: 0 1px 5px rgba(0, 0, 0, 0.783);
-                // min-width: 220px;
                 width: 100%;
                 padding: 10px 20px 10px 35px;
-
             }
 
 
@@ -144,7 +137,6 @@ header {
                     filter: none !important;
 
                 }
-
             }
         }
 
@@ -160,7 +152,6 @@ header {
                 top: 5px;
                 left: 20px;
                 cursor: pointer;
-                
 
                 >::after {
                     position: absolute;
@@ -191,8 +182,6 @@ header {
                             width: 100%;
                         }
                     }
-
-                    // &.current-lang {}
 
                     &.dropdown-lang {
                         display: none;
@@ -243,10 +232,9 @@ header {
                     column-gap: 18px;
 
                 }
-               
+
                 li {
                     text-transform: capitalize;
-
 
                     a.menu-item {
                         padding-top: 6px;
@@ -254,7 +242,6 @@ header {
                         border-top: 2px solid transparent;
                         transition: all 0.25s ease-in-out;
                         font-weight: 500;
-
 
                         &:hover {
                             color: $hover_color;
@@ -335,11 +322,8 @@ header {
                             }
                         }
                     }
-
-
                 }
             }
         }
-
     }
 }
