@@ -1,0 +1,54 @@
+.s-text-image {
+    padding: 40px 0;
+
+    .container {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .text-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 60px 0 40px;
+            max-width: 48%;
+
+            .heading {
+                max-width: 75%;
+                padding-bottom: 40px;
+
+                h2 {
+                    font-weight: 400;
+                    font-size: 28px;
+                }
+            }
+
+            .description {
+                padding-bottom: 20px;
+                max-width: 85%;
+                font-weight: 400;
+                font-size: 18px;
+            }
+
+            &>p:last-of-type {
+                padding-bottom: 0;
+            }
+        }
+
+        .image-block {
+            max-width: 48%;
+            object-fit: cover;
+
+            img {
+                border-radius: 14px;
+                width: 100%;
+            }
+        }
+
+        .text-block-nav-button {
+            padding-top: 40px;
+        }
+    }
+}

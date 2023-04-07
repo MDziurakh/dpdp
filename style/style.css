@@ -94,6 +94,20 @@ body {
   max-width: 1240px;
 }
 
+.a-btn {
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 13px 20px;
+  font-weight: 600;
+  font-size: 18px;
+  background-color: #e7e2e2;
+  cursor: pointer;
+}
+.a-btn:hover {
+  background-color: #d0c6c6;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -172,7 +186,7 @@ header .social-media .contact-icon a.tel-link {
   font-size: 13px;
   font-style: italic;
 }
-header .social-media .contact-icon a.tel-link:hover span {
+header .social-media .contact-icon a.tel-link:hover span.tel {
   background-color: #d0c6c6;
 }
 header .social-media .contact-icon a span.tel {
@@ -181,7 +195,6 @@ header .social-media .contact-icon a span.tel {
 }
 header .social-media .contact-icon a.main-tel .svg-span {
   padding-right: 5px;
-  background-color: #a28e8e !important;
 }
 header .social-media .contact-icon div.additional-tels {
   display: none;
@@ -420,6 +433,53 @@ header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-ite
 }
 .s-top-slider .top-slider .slider-caption:hover h2 {
   background: rgba(255, 255, 255, 0.5);
+}
+
+.s-text-image {
+  padding: 40px 0;
+}
+.s-text-image .container {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.s-text-image .container .text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 0 40px;
+  max-width: 48%;
+}
+.s-text-image .container .text-block .heading {
+  max-width: 75%;
+  padding-bottom: 40px;
+}
+.s-text-image .container .text-block .heading h2 {
+  font-weight: 400;
+  font-size: 28px;
+}
+.s-text-image .container .text-block .description {
+  padding-bottom: 20px;
+  max-width: 85%;
+  font-weight: 400;
+  font-size: 18px;
+}
+.s-text-image .container .text-block > p:last-of-type {
+  padding-bottom: 0;
+}
+.s-text-image .container .image-block {
+  max-width: 48%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.s-text-image .container .image-block img {
+  border-radius: 14px;
+  width: 100%;
+}
+.s-text-image .container .text-block-nav-button {
+  padding-top: 40px;
 }
 
 .wrapper {

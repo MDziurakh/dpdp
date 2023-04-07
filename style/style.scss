@@ -1,7 +1,8 @@
 @import 'fonts';
+@import 'colors';
 
 $large-screen: 1240px;
-$tablet-screen:992px;
+$tablet-screen: 992px;
 
 *,
 *::before,
@@ -28,7 +29,7 @@ li {
     margin: 0;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
@@ -45,19 +46,33 @@ body {
     height: 100%;
 }
 
-.container{
+.container {
     margin: 0 auto;
     padding: 0 40px;
     max-width: $large-screen;
 }
 
+.a-btn {
+    display: inline-block;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 13px 20px;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: lighten($color: $header-color, $amount: 10);
+    cursor: pointer;
 
+    &:hover {
+        background-color: $header-color;
+    }
+}
 
 //imports 
 @import 'header';
-$total-header-height:$header-height+$top-social-height+18px; 
+$total-header-height: $header-height+$top-social-height+18px;
 
-@import 'main';
+@import 's-top-slider';
+@import 's-text-image';
 
 .wrapper {
     margin: $total-header-height auto 0;
