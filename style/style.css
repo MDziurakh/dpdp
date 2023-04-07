@@ -328,7 +328,7 @@ header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-ite
 }
 header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-item-dropdown .dropdown-content {
   visibility: hidden;
-  background: #fff;
+  background: #ded7d7;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.783);
   left: -12px;
   min-width: 250px;
