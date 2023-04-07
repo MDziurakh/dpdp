@@ -82,14 +82,15 @@ ol {
 }
 
 body {
-  min-height: 100vh;
   scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  background-color: #e2f5f8;
+  background-color: #f9f9f9;
   font-family: "Gotham";
+  height: 100%;
 }
 
 .container {
+  margin: 0 auto;
+  padding: 0 40px;
   max-width: 1240px;
 }
 
@@ -103,23 +104,99 @@ header {
 header .social-media {
   background-color: #a28e8e;
   font-size: 13px;
+  height: 43px;
 }
 header .social-media .container {
   display: flex;
   justify-content: flex-end;
   -moz-column-gap: 10px;
        column-gap: 10px;
-  margin: 0 auto;
-  padding: 0 40px;
+}
+@media (max-width: 1140px) {
+  header .social-media .container {
+    font-size: 11px !important;
+  }
 }
 header .social-media .container > .social-media-icon {
-  padding-left: 40px;
+  padding-left: 20px;
 }
 header .social-media .container > .social-media-icon ~ .social-media-icon {
   padding-left: 0;
 }
 header .social-media .container > div:last-of-type {
   padding: 0 40px;
+}
+header .social-media span svg {
+  height: 40px;
+  width: 40px;
+  padding: 5px 0;
+  filter: grayscale(0.6);
+  transition: all 0.16s ease-in-out;
+}
+header .social-media span svg:hover {
+  filter: none;
+}
+header .social-media .contact-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-right: 20px;
+  cursor: pointer;
+}
+header .social-media .contact-icon.location-block span.location {
+  max-width: 220px;
+}
+header .social-media .contact-icon.has-children {
+  padding-right: 45px;
+}
+header .social-media .contact-icon.has-children::after {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  content: "";
+  border-top: 5px solid black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+header .social-media .contact-icon.has-children:hover::after {
+  border-top: 5px solid #d0c6c6;
+}
+header .social-media .contact-icon a {
+  display: flex;
+  align-items: center;
+}
+header .social-media .contact-icon a.tel-link {
+  font-size: 13px;
+  font-style: italic;
+}
+header .social-media .contact-icon a.tel-link:hover span {
+  background-color: #d0c6c6;
+}
+header .social-media .contact-icon a span.tel {
+  width: -moz-max-content;
+  width: max-content;
+}
+header .social-media .contact-icon a.main-tel .svg-span {
+  padding-right: 5px;
+  background-color: #a28e8e !important;
+}
+header .social-media .contact-icon div.additional-tels {
+  display: none;
+  position: absolute;
+  top: 44px;
+  background: #beb0b0;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.783);
+  width: 100%;
+  padding: 10px 20px 10px 35px;
+}
+header .social-media .contact-icon:hover div.additional-tels {
+  display: block;
+}
+header .social-media .contact-icon:hover .main-tel .svg-span svg {
+  filter: none !important;
 }
 header .social-media .language-block-wrapper {
   position: relative;
@@ -169,132 +246,56 @@ header .social-media .language-block-wrapper .language-block .flag-item:hover {
 header .social-media .language-block-wrapper .language-block:hover .dropdown-lang {
   display: block;
 }
-header .social-media span svg {
-  height: 40px;
-  width: 40px;
-  padding: 5px 0;
-  filter: grayscale(0.6);
-  transition: all 0.16s ease-in-out;
-}
-header .social-media span svg:hover {
-  filter: none;
-}
-header .social-media .contact-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  padding-right: 40px;
-}
-@media (max-width: 1100px) {
-  header .social-media .contact-icon.location-block span.location {
-    max-width: 260px;
-  }
-}
-header .social-media .contact-icon.has-children {
-  padding-right: 45px;
-}
-header .social-media .contact-icon.has-children::after {
-  position: absolute;
-  right: 10px;
-  top: 20px;
-  content: "";
-  border-top: 5px solid black;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  cursor: pointer;
-  transition: all 0.25s ease-in-out;
-}
-header .social-media .contact-icon.as-children:hover::after {
-  border-top: 5px solid #d0c6c6;
-}
-header .social-media .contact-icon a {
-  display: flex;
-  align-items: center;
-}
-header .social-media .contact-icon a.tel-link {
-  font-size: 13px;
-  font-style: italic;
-}
-header .social-media .contact-icon a.tel-link:hover span {
-  background-color: #d0c6c6;
-}
-header .social-media .contact-icon a span.tel {
-  width: -moz-max-content;
-  width: max-content;
-}
-header .social-media .contact-icon a.main-tel .svg-span {
-  padding-right: 5px;
-  background-color: #a28e8e !important;
-}
-header .social-media .contact-icon div.additional-tels {
-  display: none;
-  position: absolute;
-  top: 44px;
-  background: #beb0b0;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.783);
-  width: 100%;
-  padding: 10px 20px 10px 35px;
-}
-header .social-media .contact-icon:hover div.additional-tels {
-  display: block;
-}
-header .social-media .contact-icon:hover .main-tel .svg-span svg {
-  filter: none !important;
-}
 header .header-container {
   margin: 0 auto;
   padding: 10px 40px 10px;
-  display: grid;
-  grid-template-areas: "logo menu lang";
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
 header .header-container .logo {
-  grid-area: logo;
   height: 120px;
   display: block;
 }
 header .header-container .logo img {
   height: 100%;
 }
-header .header-container .menu {
-  grid-area: menu;
+header .header-container .header-menu {
   flex: 1;
   font-size: 18px;
 }
-header .header-container .menu ul {
+header .header-container .header-menu ul {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   -moz-column-gap: 50px;
        column-gap: 50px;
 }
 @media (max-width: 1100px) {
-  header .header-container .menu ul {
+  header .header-container .header-menu ul {
     -moz-column-gap: 18px;
          column-gap: 18px;
   }
 }
-header .header-container .menu ul li {
+header .header-container .header-menu ul li {
   text-transform: capitalize;
 }
-header .header-container .menu ul li a.menu-item {
+header .header-container .header-menu ul li a.menu-item {
   padding-top: 6px;
   cursor: pointer;
   border-top: 2px solid transparent;
   transition: all 0.25s ease-in-out;
   font-weight: 500;
 }
-header .header-container .menu ul li a.menu-item:hover {
+header .header-container .header-menu ul li a.menu-item:hover {
   color: #a9883b;
   border-top: 2px solid #a9883b;
 }
-header .header-container .menu ul li.menu-item-dropdown-wrapper {
+header .header-container .header-menu ul li.menu-item-dropdown-wrapper {
   position: relative;
   padding-right: 35px;
 }
-header .header-container .menu ul li.menu-item-dropdown-wrapper::after {
+header .header-container .header-menu ul li.menu-item-dropdown-wrapper::after {
   position: absolute;
   right: 10px;
   top: 10px;
@@ -305,27 +306,27 @@ header .header-container .menu ul li.menu-item-dropdown-wrapper::after {
   cursor: pointer;
   transition: all 0.25s ease-in-out;
 }
-header .header-container .menu ul li.menu-item-dropdown-wrapper:hover::after {
+header .header-container .header-menu ul li.menu-item-dropdown-wrapper:hover::after {
   border-top: 7px solid #a9883b;
 }
-header .header-container .menu ul li.menu-item-dropdown-wrapper:hover .menu-item-dropdown {
+header .header-container .header-menu ul li.menu-item-dropdown-wrapper:hover .menu-item-dropdown {
   cursor: pointer;
 }
-header .header-container .menu ul li.menu-item-dropdown-wrapper:hover .menu-item-dropdown a.menu-item {
+header .header-container .header-menu ul li.menu-item-dropdown-wrapper:hover .menu-item-dropdown a.menu-item {
   color: #a9883b;
   border-top: 2px solid #a9883b;
 }
-header .header-container .menu ul li.menu-item-dropdown-wrapper:hover .menu-item-dropdown .dropdown-content {
+header .header-container .header-menu ul li.menu-item-dropdown-wrapper:hover .menu-item-dropdown .dropdown-content {
   visibility: visible;
 }
-header .header-container .menu ul li.menu-item-dropdown-wrapper .menu-item-dropdown .dropdown-content-wrapper {
+header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-item-dropdown .dropdown-content-wrapper {
   padding: 18px 0;
   width: 115%;
   left: 0px;
   top: 5px;
   position: absolute;
 }
-header .header-container .menu ul li.menu-item-dropdown-wrapper .menu-item-dropdown .dropdown-content {
+header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-item-dropdown .dropdown-content {
   visibility: hidden;
   background: #fff;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.783);
@@ -339,13 +340,43 @@ header .header-container .menu ul li.menu-item-dropdown-wrapper .menu-item-dropd
   flex-direction: column;
   row-gap: 10px;
 }
-header .header-container .menu ul li.menu-item-dropdown-wrapper .menu-item-dropdown .dropdown-content .sub-item {
+header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-item-dropdown .dropdown-content .sub-item {
   transition: background-color 0.2s ease-in-out;
 }
-header .header-container .menu ul li.menu-item-dropdown-wrapper .menu-item-dropdown .dropdown-content .sub-item:hover {
+header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-item-dropdown .dropdown-content .sub-item:hover {
   background-color: #eeedee;
 }
 
+.s-top-slider {
+  margin: 0 auto;
+}
+.s-top-slider .top-slider {
+  width: 100%;
+  height: calc(92vh - 181px);
+}
+@media (min-width: 1601px) {
+  .s-top-slider .top-slider {
+    max-height: 1100px;
+  }
+}
+.s-top-slider .top-slider [class^=swiper-button-]::after {
+  content: "";
+}
+.s-top-slider .top-slider [class^=swiper-button-] {
+  width: 40px;
+  height: auto;
+}
+.s-top-slider .top-slider .swiper-slide {
+  width: 100%;
+  background-image: url("../assets/images/main-slider/founders.png");
+  background-image: url("../assets/images/main-slider/founders.webp");
+  background-size: cover;
+  background-position: center top;
+}
+.s-top-slider .top-slider .swiper-slide.second-slide {
+  background-image: url("../assets/images/main-slider/poster.png");
+}
+
 .wrapper {
-  margin: 140px auto 0;
+  margin: 181px auto 0;
 }/*# sourceMappingURL=style.css.map */
