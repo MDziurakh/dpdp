@@ -366,6 +366,10 @@ header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-ite
   width: 50px;
   height: auto;
 }
+.s-top-slider .top-slider [class^=swiper-button-]:hover svg {
+  transition: all 0.2s ease-in-out;
+  fill: #ddd8d8;
+}
 .s-top-slider .top-slider .swiper-slide {
   display: flex;
   justify-content: center;
