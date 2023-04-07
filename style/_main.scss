@@ -1,0 +1,35 @@
+.s-top-slider {
+    margin: 0 auto;
+
+
+    .top-slider {
+        width: 100%;
+        height: calc(92vh - $total-header-height);
+
+        @media (min-width:1601px) {
+           max-height: 1100px;
+        }
+
+
+        [class^="swiper-button-"]::after {
+            content: "";
+        }
+
+        [class^="swiper-button-"] {
+            width: 40px;
+            height: auto;
+        }
+
+        .swiper-slide {
+            width: 100%;
+            background-image: url('../assets/images/main-slider/founders.png');
+            background-image: url('../assets/images/main-slider/founders.webp');
+            background-size: cover;
+            background-position: center top;
+
+            &.second-slide {
+                background-image: url('../assets/images/main-slider/poster.png');
+            }
+        }
+    }
+}

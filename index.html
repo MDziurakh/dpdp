@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/assets/logo/favicon.png"/>
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png" />
     <title>DP Dev</title>
     <link rel="stylesheet" href="style/style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
 </head>
 
@@ -45,6 +47,26 @@
                             </span>
                         </a>
                     </li>
+                    <li class="contact-icon email-block">
+                        <a href="mailto:info@dpdp.com.ua" target="_blank">
+                            <span>
+                                <svg fill="#dfd6be" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
+                                    stroke="#dfd6be" stroke-width="0.00016">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke="#CCCCCC" stroke-width="0.32"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M15 2.5H1a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1zm-1.3 1.25L8.42 8.56a.62.62 0 0 1-.84 0L2.3 3.75zm-12.45 8.5V4.48l5.49 5a1.86 1.86 0 0 0 2.52 0l5.49-5v7.77z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </span>
+                            <span class="email">
+                                info@dpdp.com.ua
+                            </span>
+                        </a>
+                    </li>
                     <li class="contact-icon tel-numbers has-children">
                         <a href="tel:+38067 117 29 22" class="main-tel tel-link" target="_blank">
                             <span class="svg-span">
@@ -71,7 +93,6 @@
                             </a>
                         </div>
                     </li>
-                  
 
                     <li class="social-media-icon facebook">
                         <a href="https://www.facebook.com/" target="_blank">
@@ -165,7 +186,7 @@
                             </span>
                         </a>
                     </li>
-                   
+
                     <div class="language-block-wrapper">
                         <div class="language-block">
                             <a class="flag-item current-lang">
@@ -234,31 +255,72 @@
                     <img src="assets/logo/Logo_TDHC_ua.png" alt="logo">
                     <!-- <img src="assets/logo/logo_gorizont_TDHC_eng.png" alt="logo"> -->
                 </a>
-                <nav class="menu">
+                <nav class="header-menu">
                     <ul>
-                        <li><a class="menu-item" href="">послуги</a></li>
-                        <li><a class="menu-item" href="">наша команда</a></li>
-                        <li><a class="menu-item" href="">про нас</a></li>
+                        <li><a class="menu-item" href="#1">послуги</a></li>
+                        <li><a class="menu-item" href="#2">наша команда</a></li>
+                        <li><a class="menu-item" href="#3">про нас</a></li>
                         <li class="menu-item-dropdown-wrapper">
                             <div class="menu-item-dropdown">
                                 <a class="menu-item">новини</a>
                                 <div class="dropdown-content-wrapper">
 
                                     <div class="dropdown-content">
-                                        <a class='sub-item' href="">статті</a>
-                                        <a class='sub-item' href="">цікаві запитання</a>
+                                        <a class='sub-item' href="#4-1">статті</a>
+                                        <a class='sub-item' href="#4-2">цікаві запитання</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li><a class="menu-item" href="">контакти</a></li>
+                        <li><a class="menu-item" href="#5">контакти</a></li>
                     </ul>
                 </nav>
-
-
             </div>
         </header>
+        <main>
+
+            <section class="s-top-slider">
+                <div class="swiper top-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                        </div>
+                        <div class="swiper-slide second-slide">
+                      </div>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <svg fill="#ffffff" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            stroke="#ffffff" stroke-width="0.00032">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM23.010 14.989h-11.264l3.617-3.617c0.39-0.39 0.39-1.024 0-1.414s-1.024-0.39-1.414 0l-5.907 6.062 5.907 6.063c0.195 0.195 0.451 0.293 0.707 0.293s0.511-0.098 0.707-0.293c0.39-0.39 0.39-1.023 0-1.414l-3.68-3.68h11.327c0.552 0 1-0.448 1-1s-0.448-1-1-1z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next">
+                        <svg fill="#ffffff" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            stroke="#ffffff" stroke-width="0.00032" transform="rotate(180)">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
+                                stroke="#CCCCCC" stroke-width="0.064"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16c8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 30.032c-7.72 0-14-6.312-14-14.032s6.28-14 14-14 14 6.28 14 14-6.28 14.032-14 14.032zM23.010 14.989h-11.264l3.617-3.617c0.39-0.39 0.39-1.024 0-1.414s-1.024-0.39-1.414 0l-5.907 6.062 5.907 6.063c0.195 0.195 0.451 0.293 0.707 0.293s0.511-0.098 0.707-0.293c0.39-0.39 0.39-1.023 0-1.414l-3.68-3.68h11.327c0.552 0 1-0.448 1-1s-0.448-1-1-1z">
+                                </path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </section>
     </div>
+    </main>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
