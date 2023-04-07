@@ -401,6 +401,7 @@ header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-ite
   left: calc(100% + 10px);
   top: 50%;
   position: absolute;
+  pointer-events: none;
 }
 .s-top-slider .top-slider .slider-caption > ::before {
   content: "";
@@ -411,6 +412,10 @@ header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-ite
   left: calc(-30% - 10px);
   top: 50%;
   position: absolute;
+  pointer-events: none;
+}
+.s-top-slider .top-slider .slider-caption:hover h2 {
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .wrapper {
