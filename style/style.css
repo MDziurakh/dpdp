@@ -195,7 +195,7 @@ header .social-media .contact-icon div.additional-tels {
 header .social-media .contact-icon:hover div.additional-tels {
   display: block;
 }
-header .social-media .contact-icon:hover .main-tel .svg-span svg {
+header .social-media .contact-icon:hover svg {
   filter: none !important;
 }
 header .social-media .language-block-wrapper {

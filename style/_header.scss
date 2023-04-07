@@ -65,6 +65,7 @@ header {
             padding-right: 20px;
             cursor: pointer;
 
+            
             &.location-block {
 
                 // flex: 1;
@@ -156,15 +157,11 @@ header {
                     display: block;
                 }
 
-                .main-tel {
+                svg {
+                    filter: none !important;
 
-                    .svg-span {
-                        svg {
-                            filter: none !important;
-
-                        }
-                    }
                 }
+
             }
         }
 
