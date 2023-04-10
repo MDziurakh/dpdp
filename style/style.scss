@@ -74,6 +74,7 @@ $total-header-height: $header-height+$top-social-height+18px;
 @import 's-top-slider';
 @import 's-text-image';
 @import 's-services';
+@import 's-small-about';
 
 .wrapper {
     margin: $total-header-height auto 0;

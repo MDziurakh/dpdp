@@ -570,6 +570,44 @@ header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-ite
   font-weight: 400;
 }
 
+.s-small-about {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+.s-small-about .container {
+  position: relative;
+  max-width: 1100px;
+  text-align: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 15%;
+}
+.s-small-about .about__heading-block {
+  padding-bottom: 80px;
+  color: #14214d;
+}
+.s-small-about .about__heading-block * {
+  line-height: 1.5;
+}
+.s-small-about .about__heading-block .motto {
+  letter-spacing: 1px;
+  color: #86776f;
+}
+.s-small-about .about__description-block {
+  padding-bottom: 80px;
+  font-size: 14px;
+  line-height: 2;
+  font-style: italic;
+}
+.s-small-about .popup-consultation-block .link-to-consultation {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 14px;
+}
+.s-small-about .popup-consultation-block .link-to-consultation:hover {
+  text-decoration: underline;
+}
+
 .wrapper {
   margin: 181px auto 0;
 }/*# sourceMappingURL=style.css.map */
