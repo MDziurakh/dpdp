@@ -488,7 +488,10 @@ header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-ite
   background-color: #ffffff;
 }
 .s-serviсes .s-services-heading {
-  padding-bottom: 40px;
+  padding-bottom: 80px;
+  background-repeat: no-repeat;
+  background-position: center 70%;
+  background-size: 40px;
 }
 .s-serviсes .s-services-heading h2 {
   text-align: center;
@@ -501,9 +504,9 @@ header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-ite
   gap: 40px 20px;
 }
 .s-serviсes .services-list .service-item {
-  min-height: 500px;
+  min-height: 450px;
   border-radius: 10px;
-  padding: 40px 40px;
+  padding: 30px 30px 15px;
   background-color: rgb(255, 255, 255);
   min-width: 350px;
   width: 32%;
@@ -528,7 +531,6 @@ header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-ite
   background-position: center top;
   background-repeat: no-repeat;
   transition: all 0.2s ease-in-out;
-  filter: grayscale(100%);
 }
 .s-serviсes .services-list .service-item .service-item_info-text-block {
   height: 50%;
@@ -603,9 +605,23 @@ header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-ite
   font-weight: 600;
   font-style: italic;
   font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+.s-small-about .popup-consultation-block .link-to-consultation svg {
+  transition: all 0.2s ease-in-out;
+  padding-left: 5px;
+  height: 30px;
+  width: auto;
 }
 .s-small-about .popup-consultation-block .link-to-consultation:hover {
   text-decoration: underline;
+  color: #86776f;
+}
+.s-small-about .popup-consultation-block .link-to-consultation:hover svg {
+  stroke: #86776f;
 }
 
 .wrapper {
