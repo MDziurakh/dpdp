@@ -18,11 +18,21 @@
         [class^="swiper-button-"] {
             width: 50px;
             height: auto;
+            svg{
+                border: 2px solid white;
+                
+            }
 
             &:hover {
+
                 svg {
-                    transition: all .2s ease-in-out;
-                    fill: #ddd8d8;
+                    border-color: #ddd8d8;
+
+                    *{
+                        transition: all .09s ease-in-out;
+                        fill: #ddd8d8;
+                        stroke: #ddd8d8;
+                    }
                 }
             }
         }
@@ -84,7 +94,7 @@
 
             &:hover {
                 h2 {
-
+                    transition: all 0.2s ease-in-out;
                     background: rgba(255, 255, 255, 0.5);
                 }
             }

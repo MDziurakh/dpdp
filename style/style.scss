@@ -1,7 +1,18 @@
 @import 'fonts';
 @import 'colors';
 
-$large-screen: 1240px;
+//imports 
+@import 'header';
+$total-header-height: $header-height+$top-social-height+18px;
+
+@import 's-top-slider';
+@import 's-text-image';
+@import 's-services';
+@import 's-small-about';
+@import 's-our-team-main';
+
+
+$large-screen: 1360px;
 $tablet-screen: 992px;
 
 *,
@@ -67,14 +78,18 @@ body {
     }
 }
 
-//imports 
-@import 'header';
-$total-header-height: $header-height+$top-social-height+18px;
+.block-heading{
+    padding-top: 6px;
+    cursor: pointer;
+    border-top: 2px solid transparent;
+    transition: all 0.25s ease-in-out;
 
-@import 's-top-slider';
-@import 's-text-image';
-@import 's-services';
-@import 's-small-about';
+    &:hover {
+        color: $hover_color;
+        border-color: $hover_color;
+    }
+}
+
 
 .wrapper {
     margin: $total-header-height auto 0;
