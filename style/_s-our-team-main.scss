@@ -1,14 +1,15 @@
-$slider-width:320px;
-$slider-padding:40px;
+$slider-width: 320px;
+$slider-padding: 40px;
 
 .s-our-team-main {
     min-height: 40vh;
     padding: $slider-padding 0;
 
-    .our-team__heading{
+    .our-team__heading {
         padding: 40px 0;
         text-align: center;
-        h2{
+
+        h2 {
             color: $header-color;
             text-transform: uppercase;
             font-weight: 400;
@@ -20,29 +21,34 @@ $slider-padding:40px;
     .our-team__slider-container {
         max-width: calc($slider-width*2 + ($slider-padding*2)*2);
         margin: 0 auto;
-        
+
         [class^="swiper-button-"]::after {
             content: "";
         }
 
         [class="swiper-button-next"] {
-                right: 0;
+            right: 0;
         }
+
         [class="swiper-button-prev"] {
-                left: 0;
+            left: 0;
         }
 
         [class^="swiper-button-"] {
             width: $slider-padding;
             height: auto;
-            svg{
+
+            svg {
                 border: 2px solid white;
-                
+                border-radius: 10px;
+
             }
+
             &:hover {
                 svg {
                     border-color: #ddd8d8;
-                    *{
+
+                    * {
                         transition: all .09s ease-in-out;
                         fill: #ddd8d8;
                         stroke: #ddd8d8;
@@ -55,7 +61,7 @@ $slider-padding:40px;
     }
 
     .swiper-slide {
-        padding: 40px 50px ;
+        padding: 40px 50px;
         background-color: transparent;
         // height: 549px;
         // max-width: 320px;
@@ -66,18 +72,21 @@ $slider-padding:40px;
             background-position: center top;
             background-size: cover;
         }
-        .slider-description{
+
+        .slider-description {
             color: white;
             padding: 40px 0;
 
-            >*{
+            >* {
                 padding-bottom: 20px;
                 line-height: 1.7;
             }
-            h2{
+
+            h2 {
                 text-transform: uppercase;
             }
-            p{
+
+            p {
                 font-style: italic;
             }
         }
