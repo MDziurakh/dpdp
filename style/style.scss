@@ -10,6 +10,7 @@ $total-header-height: $header-height+$top-social-height+18px;
 @import 's-services';
 @import 's-small-about';
 @import 's-our-team-main';
+@import 's-top-articles';
 
 
 $large-screen: 1360px;
@@ -78,11 +79,13 @@ body {
     }
 }
 
-.block-heading{
+.block-heading {
     padding-top: 6px;
     cursor: pointer;
     border-top: 2px solid transparent;
     transition: all 0.25s ease-in-out;
+    font-weight: 400;
+    text-transform: uppercase;
 
     &:hover {
         color: $hover_color;
@@ -93,4 +96,23 @@ body {
 
 .wrapper {
     margin: $total-header-height auto 0;
+}
+
+
+.interactive-btn{
+    display: inline-block;
+    // background:linear-gradient(161.33deg, #4D6677 11.43%, rgba(77, 102, 119, 0.46) 74.42%);
+    padding: 13px 24px;
+    border-radius: 10px;
+    background: linear-gradient(294deg, #3a5e76 1.43%, #4d667775 99.42%);
+    background-size:420%;  
+    background-repeat: no-repeat;
+    cursor: pointer;
+    color: white;
+    
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        // background: linear-gradient(294deg, #4D6677 11.43%, rgba(77, 102, 119, 0.46) 74.42%);;
+        background-size:100%;  
+    }
 }
