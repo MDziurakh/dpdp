@@ -1,0 +1,32 @@
+.s-images-gallery {
+    padding: 80px 40px;
+    background-color: rgb(228, 228, 228);
+
+    .container {}
+
+    .gallery {
+        column-count: 3;
+
+        gap: 10px;
+
+        a {
+            margin-bottom: 10px;
+            height: 100%;
+            width: auto;
+            display: inline-block;
+            border-radius: 10px;
+
+            
+            img {
+                border-radius: 10px;
+                width: 100%;
+                &:hover {
+                    transition: all 0.3s ease-in-out;
+                    box-shadow: 0 0 10px 0px $brown-logo-color;
+                }
+            }
+        }
+
+    }
+
+}
