@@ -746,6 +746,9 @@ header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-ite
   padding: 80px 40px;
   background-color: rgb(228, 228, 228);
 }
+.s-images-gallery .block-heading {
+  padding: 40px 0;
+}
 .s-images-gallery .gallery {
   -moz-column-count: 3;
        column-count: 3;
@@ -830,12 +833,21 @@ body {
 }
 
 .block-heading {
+  text-align: center;
   padding-top: 6px;
   cursor: pointer;
   border-top: 2px solid transparent;
   transition: all 0.25s ease-in-out;
   font-weight: 400;
   text-transform: uppercase;
+}
+.block-heading.no-link {
+  color: black;
+  cursor: auto;
+  border: none;
+}
+.block-heading.no-link:hover {
+  color: black;
 }
 .block-heading:hover {
   color: #a9883b;

@@ -74,25 +74,35 @@ body {
     font-size: 18px;
     background-color: lighten($color: $header-color, $amount: 10);
     cursor: pointer;
-
     &:hover {
         background-color: $header-color;
     }
 }
 
 .block-heading {
+    text-align: center;
     padding-top: 6px;
     cursor: pointer;
     border-top: 2px solid transparent;
     transition: all 0.25s ease-in-out;
     font-weight: 400;
     text-transform: uppercase;
+    &.no-link{
+        color: black;
+        cursor: auto;
+        border: none;
+        &:hover {
+            color: black;
+            // border-color: ;
+        }
+    }
 
     &:hover {
         color: $hover_color;
         border-color: $hover_color;
     }
 }
+
 
 
 .wrapper {
