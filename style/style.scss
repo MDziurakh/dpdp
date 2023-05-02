@@ -12,6 +12,7 @@ $total-header-height: $header-height+$top-social-height+18px;
 @import 's-our-team-main';
 @import 's-top-articles';
 @import 's-images-gallery';
+@import 's-google-map';
 
 
 $large-screen: 1360px;
@@ -101,6 +102,12 @@ body {
         color: $hover_color;
         border-color: $hover_color;
     }
+}
+
+.block-subheading{
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
 }
 
 
