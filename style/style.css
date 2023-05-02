@@ -852,16 +852,48 @@ header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-ite
   border-radius: 10px;
   border: none;
 }
+.s-google-map .map-form-block .contact-us-form form .datetime-wrapper {
+  position: relative;
+}
+.s-google-map .map-form-block .contact-us-form form .datetime-wrapper span {
+  display: inline-block;
+  padding: 3px 5px;
+  background-color: #e2d6d6;
+  position: absolute;
+  opacity: 0;
+  font-size: 10px;
+  top: 0;
+  left: 20px;
+  transition: all 0.2s ease;
+  border-radius: 5px 5px 0 0;
+}
+.s-google-map .map-form-block .contact-us-form form .datetime-wrapper:hover span {
+  opacity: 1;
+}
 .s-google-map .map-form-block iframe {
   padding: 0;
   flex: 1 1 50%;
 }
 
 footer {
+  padding: 40px 0;
   background-color: #86776f;
 }
-footer img {
+footer .footer__top {
+  padding: 0 0 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #14214d;
+}
+footer .footer__top .logo {
+  display: inline-block;
+  height: 100px;
+}
+footer .footer__top .logo img {
   height: 100%;
+}
+footer .footer__top .popup-wrapper {
+  align-self: flex-end;
 }
 
 *,
