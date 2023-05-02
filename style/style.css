@@ -770,6 +770,90 @@ header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-ite
   box-shadow: 0 0 10px 0px #86776f;
 }
 
+.s-google-map {
+  background-color: #cecece;
+}
+.s-google-map .container {
+  padding: 60px 0;
+  text-align: center;
+}
+.s-google-map iframe {
+  width: 100%;
+  height: auto;
+  max-width: 1000px;
+  padding: 0 40px;
+  border-radius: 10px;
+}
+.s-google-map .map-link {
+  border-radius: 10px;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+  color: black;
+  color: #6a5e58;
+}
+.s-google-map .map-link:hover {
+  transition: all 0.3s ease-in-out;
+  color: #4e4541;
+  text-decoration: underline;
+}
+.s-google-map .map-form-block {
+  display: flex;
+  gap: 20px;
+  padding: 0 40px;
+}
+.s-google-map .map-form-block .contact-us-form {
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  flex: 1 1 50%;
+}
+.s-google-map .map-form-block .contact-us-form .block-subheading {
+  padding: 15px 0;
+}
+.s-google-map .map-form-block .contact-us-form form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.s-google-map .map-form-block .contact-us-form form input, .s-google-map .map-form-block .contact-us-form form textarea {
+  border-radius: 10px 10px 0 0;
+  border: none;
+  padding: 10px 20px;
+  border-bottom: 2px solid transparent;
+}
+.s-google-map .map-form-block .contact-us-form form input:focus-visible, .s-google-map .map-form-block .contact-us-form form textarea:focus-visible {
+  outline: none;
+  border-bottom: 2px solid #86776f;
+}
+.s-google-map .map-form-block .contact-us-form form .form__input-holder {
+  padding: 10px 20px;
+}
+.s-google-map .map-form-block .contact-us-form form .form__input-holder.half {
+  width: 50%;
+}
+.s-google-map .map-form-block .contact-us-form form .form__input-holder.full {
+  width: 100%;
+}
+.s-google-map .map-form-block .contact-us-form form input {
+  width: 100%;
+}
+.s-google-map .map-form-block .contact-us-form form textarea {
+  width: 100%;
+  resize: none;
+}
+.s-google-map .map-form-block .contact-us-form form input[type=text], .s-google-map .map-form-block .contact-us-form form input[type=email], .s-google-map .map-form-block .contact-us-form form input[type=tel], .s-google-map .map-form-block .contact-us-form form textarea {
+  background-color: #f7f4f4;
+}
+.s-google-map .map-form-block .contact-us-form form input[type=submit] {
+  border-radius: 10px;
+  border: none;
+}
+.s-google-map .map-form-block iframe {
+  padding: 0;
+  flex: 1 1 50%;
+}
+
 *,
 *::before,
 *::after {
@@ -852,6 +936,12 @@ body {
 .block-heading:hover {
   color: #a9883b;
   border-color: #a9883b;
+}
+
+.block-subheading {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
 }
 
 .wrapper {
