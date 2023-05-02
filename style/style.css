@@ -774,8 +774,11 @@ header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-ite
   background-color: #cecece;
 }
 .s-google-map .container {
-  padding: 60px 0;
+  padding: 0 0 40px;
   text-align: center;
+}
+.s-google-map .container .block-heading {
+  padding: 40px 0;
 }
 .s-google-map iframe {
   width: 100%;
@@ -842,7 +845,7 @@ header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-ite
   width: 100%;
   resize: none;
 }
-.s-google-map .map-form-block .contact-us-form form input[type=text], .s-google-map .map-form-block .contact-us-form form input[type=email], .s-google-map .map-form-block .contact-us-form form input[type=tel], .s-google-map .map-form-block .contact-us-form form textarea {
+.s-google-map .map-form-block .contact-us-form form input[type=text], .s-google-map .map-form-block .contact-us-form form input[type=email], .s-google-map .map-form-block .contact-us-form form input[type=tel], .s-google-map .map-form-block .contact-us-form form input[type=datetime-local], .s-google-map .map-form-block .contact-us-form form textarea {
   background-color: #f7f4f4;
 }
 .s-google-map .map-form-block .contact-us-form form input[type=submit] {
@@ -852,6 +855,13 @@ header .header-container .header-menu ul li.menu-item-dropdown-wrapper .menu-ite
 .s-google-map .map-form-block iframe {
   padding: 0;
   flex: 1 1 50%;
+}
+
+footer {
+  background-color: #86776f;
+}
+footer img {
+  height: 100%;
 }
 
 *,
