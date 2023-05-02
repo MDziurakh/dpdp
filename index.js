@@ -27,7 +27,7 @@ const ourTeamSwiper = new Swiper(".our-team__slider", {
 
 // datetime controller
 function getCurrentTime() {
-  const dateControl = document.querySelector("#form-datetime");
+  const dateControl = document.querySelector(".main-form-datetime");
   const today = new Date();
   let nextHour = today.getHours() + 1;
   // let minutes = today.getMinutes();
@@ -43,4 +43,5 @@ function getCurrentTime() {
   console.log(today.toISOString().substring(0, 10) + "");
   dateControl.min = `${today.toISOString().substring(0, 10) + ""}T14:00`;
 }
-// getCurrentTime(); для форми запису
+getCurrentTime(); 
+// для форми запису.
