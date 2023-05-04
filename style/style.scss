@@ -47,6 +47,7 @@ li {
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 ul,
@@ -79,6 +80,10 @@ body {
     &:hover {
         background-color: $header-color;
     }
+}
+
+.svg-padding{
+    margin-right: -5px;
 }
 
 .block-heading {
