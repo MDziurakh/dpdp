@@ -31,25 +31,7 @@ footer {
 
         .middle__email {}
 
-        .middle__tels {
-
-            &::after {
-                position: absolute;
-                right: 10px;
-                top: 20px;
-                content: '';
-                border-top: 5px solid black;
-                border-left: 5px solid transparent;
-                border-right: 5px solid transparent;
-                cursor: pointer;
-                transition: all 0.25s ease-in-out;
-
-            }
-
-            &.has-children:hover::after {
-                border-top: 5px solid $header-color;
-            }
-        }
+        .middle__tels {}
 
         .footer__middle-item {
             border-bottom: 1px solid $blue-logo-color;

@@ -2,7 +2,8 @@
 @import 'colors';
 
 //imports 
-@import 'header';
+// @import 'header';
+@import 'header2';
 $total-header-height: $header-height+$top-social-height+18px;
 
 @import 's-top-slider';
@@ -119,7 +120,7 @@ body {
 
 
 .wrapper {
-    margin: $total-header-height auto 0;
+    // margin: $total-header-height auto 0;
 }
 
 
