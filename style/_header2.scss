@@ -29,26 +29,32 @@ header {
             min-height: 50px;
             
             padding-right: 96px;
-            display: flex;
-            justify-content: space-between;
             align-items: center;
             width: 100%;
             position: relative;
+            display: flex;
+            justify-content: space-between;
+            @media (max-width:519.98px) {
+                justify-content: flex-end;
+                &::after{
+                    content: "";
+                    display: inline-block;
+                    width: 100%;
+                    // height: 20px;
+                }
+            }
+
             
             @media (max-width:991.98px) {
                 min-height: 45px;
                 // min-height: 0px;
                 // max-height: 40px;
-                padding: 0 66px 0 10px;
+                padding: 0 74px 0 10px;
                 column-gap: 14px;
             }
 
-            @media (max-width:767.98px) {
-                // justify-content: flex-start;
-            }
-
-            @media (max-width:479.98px) {
-                // padding: 0px 50px 0 10px;
+            @media (max-width:349.98px) {
+                padding: 0px 66px 0 2px;
             }
         }
 
@@ -71,7 +77,7 @@ header {
 
             &.adress {
                 @media (max-width:767.98px) {}
-
+                @media (max-width:519.98px) {}
                 .svg-icon-container {
                     background-image: url('../assets/images/header/location-pin-svgrepo-com.svg');
 
@@ -79,6 +85,8 @@ header {
             }
 
             &.email {
+                @media (max-width:519.98px) {}
+
                 .svg-icon-container {
                     background-image: url('../assets/images/header/mail-svgrepo-com.svg');
 
@@ -97,8 +105,10 @@ header {
                 @media (max-width:767.98px) {
                     // flex-grow: 1;;
                 }
-
-                // @media (max-width:479.98px) {
+                @media (max-width:519.98px) {
+                    order: 3;
+                }
+                // @media (max-width:479.98px) {a
                 //     flex: 0 0 115px;
 
                 // }
@@ -122,9 +132,6 @@ header {
                         text-shadow: 0 0 5px $header-color;
                     }
 
-                    @media (max-width:767.98px) {
-                        // flex-grow: 1;;
-                    }
                 }
 
                 .top-contact-block__item-container {
@@ -196,17 +203,17 @@ header {
                 background-position: center;
                 filter: grayscale(66%);
 
-                @media (max-width:991.98px) {
-                    // height: 20px;
-                    // width: 20px;
+                @media (max-width:349.98px) {
+                    height: 24px;
+                    width: 24px;
                 }
 
             }
 
             .contact-info {
-                @media (max-width:767.98px) {
+                @media (max-width:519.98px) {
                     // this width!!!!!!!!!!!!
-                    // display: none;
+                    display: none;
                 }
 
             }
