@@ -46,7 +46,7 @@ function getCurrentTime() {
 // getCurrentTime();
 // для форми запису.
 
-window.onload = function () {
+// window.onload = function () {
   const mobileMenu = document.querySelector(".mobile-nav-menu");
   const hamburger = document.querySelector("#hamburger");
   hamburger.addEventListener("click", () => {
@@ -76,4 +76,4 @@ window.onload = function () {
   
     // if(targetElement.)
   }
-};
+// };
