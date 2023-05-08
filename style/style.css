@@ -61,12 +61,7 @@ header .top-contact-block {
 }
 @media (max-width: 991.98px) {
   header .top-contact-block {
-    font-size: 10px;
-  }
-}
-@media (max-width: 479.98px) {
-  header .top-contact-block {
-    font-size: 8.5px;
+    font-size: 11px;
   }
 }
 header .top-contact-block .container {
@@ -129,12 +124,7 @@ header .top-contact-block .top-contact-block__item.tel {
   }
 }
 header .top-contact-block .top-contact-block__item.tel .tel-link {
-  padding: 0 10px 10px;
-}
-@media (max-width: 479.98px) {
-  header .top-contact-block .top-contact-block__item.tel .tel-link {
-    padding-left: 2px !important;
-  }
+  padding: 10px 10px;
 }
 header .top-contact-block .top-contact-block__item.tel .tel-link:first-child {
   margin-right: 15px;

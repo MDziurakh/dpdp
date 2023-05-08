@@ -16,14 +16,14 @@ header {
         font-size: 13px;
 
         @media (max-width: 991.98px) {
-            font-size: 10px;
+            font-size: 11px;
 
         }
 
-        @media (max-width:479.98px) {
-            font-size: 8.5px;
+        // @media (max-width:479.98px) {
+        //     // font-size: 8.5px;
 
-        }
+        // }
 
         .container {
             min-height: 50px;
@@ -114,11 +114,11 @@ header {
                 // }
 
                 .tel-link {
-                    padding: 0 10px 10px;
+                    padding: 10px 10px;
 
 
                     @media (max-width:479.98px) {
-                        padding-left: 2px !important;
+                        // padding-left: 2px !important;
 
                     }
 
