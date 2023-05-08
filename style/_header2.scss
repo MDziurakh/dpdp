@@ -27,16 +27,18 @@ header {
 
         .container {
             min-height: 50px;
-            
+
             padding-right: 96px;
             align-items: center;
             width: 100%;
             position: relative;
             display: flex;
             justify-content: space-between;
+
             @media (max-width:519.98px) {
                 justify-content: flex-end;
-                &::after{
+
+                &::after {
                     content: "";
                     display: inline-block;
                     width: 100%;
@@ -44,7 +46,7 @@ header {
                 }
             }
 
-            
+
             @media (max-width:991.98px) {
                 min-height: 45px;
                 // min-height: 0px;
@@ -77,7 +79,9 @@ header {
 
             &.adress {
                 @media (max-width:767.98px) {}
+
                 @media (max-width:519.98px) {}
+
                 .svg-icon-container {
                     background-image: url('../assets/images/header/location-pin-svgrepo-com.svg');
 
@@ -105,9 +109,11 @@ header {
                 @media (max-width:767.98px) {
                     // flex-grow: 1;;
                 }
+
                 @media (max-width:519.98px) {
                     order: 3;
                 }
+
                 // @media (max-width:479.98px) {a
                 //     flex: 0 0 115px;
 
@@ -212,7 +218,6 @@ header {
 
             .contact-info {
                 @media (max-width:519.98px) {
-                    // this width!!!!!!!!!!!!
                     display: none;
                 }
 
@@ -244,8 +249,6 @@ header {
                 top: 65%;
                 right: 0;
 
-                // flex: 1;
-                // text-align: end;
                 .social-media-container {
                     display: flex;
                     flex-direction: column;
@@ -258,11 +261,6 @@ header {
             }
         }
 
-        // @media (max-width:369.98px) {
-        //     text-align: center;
-        // }
-
-
         .social-media-icon {
             display: inline-block;
             height: 30px;
@@ -273,8 +271,6 @@ header {
             filter: grayscale(38%);
 
             @media (max-width:991.98px) {
-                // top: 12px;
-
                 &:hover {
                     filter: none;
                 }
@@ -448,7 +444,6 @@ header {
             @media (max-width:991.98px) {
                 background-image: url('../assets/logo/logo_gorizont_TDHC_ua.png');
                 height: 50px;
-                min-width: 225px;
                 width: 100%;
                 max-width: 400px;
                 background-position: center;
