@@ -60,12 +60,14 @@ function getCurrentTime() {
       tab.classList.toggle("open");
     });
   });
-  document.addEventListener("click", documentActions);
 
+  
+  document.addEventListener("click", documentActions);
   function documentActions(e) {
     const targetElement = e.target;
     if (
       !targetElement.closest(".menu-item") &&
+      !targetElement.closest(".mobile-nav-menu") &&
       mobileMenu.classList.contains("open") &&
       !targetElement.closest(".hamburger") &&
       !targetElement.classList.contains("hamburger")
