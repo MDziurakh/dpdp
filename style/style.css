@@ -74,17 +74,6 @@ header .top-contact-block .container {
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 991.98px) {
-  header .top-contact-block .container {
-    min-height: 45px;
-    padding: 0 74px 0 10px;
-  }
-}
-@media (max-width: 444.98px) {
-  header .top-contact-block .container {
-    padding: 0px 20px;
-  }
-}
 header .top-contact-block .top-contact-block__item .top-contact-block__item-container {
   display: inline-flex;
   align-items: center;
@@ -101,11 +90,6 @@ header .top-contact-block .top-contact-block__item.email .svg-icon-container {
 }
 header .top-contact-block .top-contact-block__item.tel {
   flex: 0 0 180px;
-}
-@media (max-width: 991.98px) {
-  header .top-contact-block .top-contact-block__item.tel {
-    flex: 0 0 143px;
-  }
 }
 header .top-contact-block .top-contact-block__item.tel .tel-link {
   padding: 10px 10px;
@@ -138,13 +122,6 @@ header .top-contact-block .top-contact-block__item.tel .tels-container {
   background-color: #a28e8e;
   transition: max-height 0.3s ease;
 }
-@media (max-width: 991.98px) {
-  header .top-contact-block .top-contact-block__item.tel .tels-container {
-    left: 35px;
-    top: 9px;
-    width: calc(100% - 35px);
-  }
-}
 header .top-contact-block .top-contact-block__item.tel .tels-section-opener {
   height: 30px;
   width: 30px;
@@ -156,11 +133,6 @@ header .top-contact-block .top-contact-block__item.tel .tels-section-opener {
 header .top-contact-block .top-contact-block__item.tel .tels-section-opener svg {
   height: 14px;
 }
-@media (max-width: 991.98px) {
-  header .top-contact-block .top-contact-block__item.tel .tels-section-opener svg {
-    height: 9px;
-  }
-}
 header .top-contact-block .top-contact-block__item.tel .svg-icon-container {
   background-image: url("../assets/images/header/phone-svgrepo-com.svg");
 }
@@ -171,17 +143,6 @@ header .top-contact-block .top-contact-block__item .svg-icon-container {
   background-size: contain;
   background-position: center;
   filter: grayscale(66%);
-}
-@media (max-width: 349.98px) {
-  header .top-contact-block .top-contact-block__item .svg-icon-container {
-    height: 24px;
-    width: 24px;
-  }
-}
-@media (max-width: 779.98px) {
-  header .top-contact-block .top-contact-block__item .contact-info {
-    display: none;
-  }
 }
 header .top-contact-block .top-contact-block__item:hover .svg-icon-container {
   filter: none;
@@ -228,17 +189,6 @@ header .top-contact-block .top-contact__language-block {
   right: 10px;
   top: 5px;
 }
-@media (max-width: 991.98px) {
-  header .top-contact-block .top-contact__language-block {
-    top: 8px;
-  }
-}
-@media (max-width: 479.98px) {
-  header .top-contact-block .top-contact__language-block {
-    top: 4px;
-    right: 5px;
-  }
-}
 header .top-contact-block .top-contact__language-block .language-block-wrapper {
   position: relative;
 }
@@ -255,13 +205,7 @@ header .top-contact-block .top-contact__language-block .language-block-wrapper .
   transition: all 0.2s ease;
   padding: 4px 17px 4px 4px;
   padding-right: 14px;
-  max-height: 40px;
-}
-@media (max-width: 991.98px) {
-  header .top-contact-block .top-contact__language-block .language-block-wrapper .language-block {
-    padding: 2px 12px 2px 3px;
-    max-height: 32px;
-  }
+  max-height: 36px;
 }
 header .top-contact-block .top-contact__language-block .language-block-wrapper .language-block::after {
   position: absolute;
@@ -288,11 +232,6 @@ header .top-contact-block .top-contact__language-block .language-block-wrapper .
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 5px;
-}
-@media (max-width: 991.98px) {
-  header .top-contact-block .top-contact__language-block .language-block-wrapper .language-block .flag-item {
-    border-radius: 4px;
-  }
 }
 header .top-contact-block .top-contact__language-block .language-block-wrapper .language-block .flag-item.dropdown-lang {
   background-image: url("../assets/images/header/united-kingdom-uk-svgrepo-com.svg");
@@ -417,7 +356,6 @@ header .main-header-block .nav-menu .menu-item {
   border-top: 2px solid transparent;
   transition: all 0.25s ease-in-out;
   font-weight: 400;
-  transition: all 0.2s ease;
 }
 header .main-header-block .nav-menu .menu-item a {
   display: inline-block;
@@ -441,7 +379,7 @@ header .main-header-block .nav-menu .menu-item.tab::after {
   right: 0;
   content: "";
   border: solid black;
-  border-width: 0 3px 3px 0;
+  border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 3px;
   transform: rotate(45deg);

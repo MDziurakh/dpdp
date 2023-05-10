@@ -5,7 +5,7 @@ $hide-contact: 779.98px;
 
 header {
     background-color: $header-color;
-    position: sticky; // чи абсолют?
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -22,11 +22,6 @@ header {
 
         }
 
-        // @media (max-width:479.98px) {
-        //     // font-size: 8.5px;
-
-        // }
-
         .container {
             min-height: 50px;
 
@@ -36,26 +31,9 @@ header {
             position: relative;
             display: flex;
             justify-content: space-between;
-
-            @media (max-width:991.98px) {
-                min-height: 45px;
-                padding: 0 74px 0 10px;
-            }
-
-            @media (max-width:444.98px) {
-                padding: 0px 20px;
-            }
         }
 
         .top-contact-block__item {
-            @media (max-width:767.98px) {
-                // flex: 0 0 30px;
-            }
-
-            // @media (max-width:379.98px) {
-            //     flex: 0 0 24px;
-            // }
-
             .top-contact-block__item-container {
                 display: inline-flex;
                 align-items: center;
@@ -65,69 +43,31 @@ header {
             }
 
             &.adress {
-                @media (max-width:767.98px) {}
-
-                @media (max-width:519.98px) {}
-
                 .svg-icon-container {
                     background-image: url('../assets/images/header/location-pin-svgrepo-com.svg');
-
                 }
             }
 
             &.email {
-                @media (max-width:519.98px) {}
-
                 .svg-icon-container {
                     background-image: url('../assets/images/header/mail-svgrepo-com.svg');
-
                 }
             }
 
             &.tel {
                 flex: 0 0 180px;
 
-                @media (max-width:991.98px) {
-                    flex: 0 0 143px;
-
-                }
-
-
-
-
-                @media (max-width:519.98px) {
-                    // order: ;
-                }
-
-                @media (max-width:479.98px) {
-
-                    // flex: 0 0 35px;
-                    .tels-container {
-                        // display: none !important;
-                    }
-
-
-                }
-
                 .tel-link {
                     padding: 10px 10px;
-
-
-                    @media (max-width:479.98px) {
-                        // padding-left: 2px !important;
-
-                    }
 
                     &:first-child {
                         margin-right: 15px;
                         padding: 0 0 10px 10px;
-
                     }
 
                     &:hover {
                         text-shadow: 0 0 5px $header-color;
                     }
-
                 }
 
                 .top-contact-block__item-container {
@@ -139,7 +79,6 @@ header {
                         .tels-container {
                             max-height: 100vh;
                             transition: max-height 0.3s ease;
-
                         }
                     }
                 }
@@ -148,13 +87,6 @@ header {
                     z-index: 12;
                     left: 35px;
                     top: 7px;
-
-                    @media (max-width:991.98px) {
-                        left: 35px;
-                        top: 9px;
-                        width: calc(100% - 35px);
-                    }
-
                     position: absolute;
                     display: flex;
                     flex-direction: column;
@@ -172,22 +104,14 @@ header {
                     justify-content: center;
                     align-items: center;
                     z-index: 20;
-                    // border: 1px solid #000;
 
                     svg {
                         height: 14px;
-
-                        @media (max-width:991.98px) {
-                            height: 9px;
-
-                        }
-
                     }
                 }
 
                 .svg-icon-container {
                     background-image: url('../assets/images/header/phone-svgrepo-com.svg');
-
                 }
             }
 
@@ -198,24 +122,9 @@ header {
                 background-size: contain;
                 background-position: center;
                 filter: grayscale(66%);
-
-                @media (max-width:349.98px) {
-                    height: 24px;
-                    width: 24px;
-                }
-
-            }
-
-            .contact-info {
-                @media (max-width:$hide-contact) {
-
-                    display: none;
-                }
-
             }
 
             &:hover {
-
                 .svg-icon-container {
                     filter: none;
                 }
@@ -264,8 +173,6 @@ header {
             &:hover {
                 filter: none;
             }
-
-            @media (max-width:991.98px) {}
         }
 
         .interactive-btn {
@@ -277,16 +184,6 @@ header {
             z-index: 10000;
             right: 10px;
             top: 5px;
-
-            @media (max-width:991.98px) {
-                top: 8px;
-            }
-
-            @media (max-width:479.98px) {
-                top: 4px;
-                right: 5px;
-
-            }
 
             .language-block-wrapper {
                 position: relative;
@@ -304,33 +201,12 @@ header {
                     transition: all 0.2s ease;
                     padding: 4px 17px 4px 4px;
                     padding-right: 14px;
-                    max-height: 40px;
-
-                    @media (max-width:991.98px) {
-                        padding: 2px 12px 2px 3px;
-                        max-height: 32px;
-
-                    }
-
-                    @media (max-width:479.98px) {
-                        // padding: 2px 12px 2px 3px;
-                        // max-height: 20px;
-
-                    }
+                    max-height: 36px;
 
                     &::after {
                         position: absolute;
                         top: 12px;
                         right: 3px;
-
-                        @media (max-width:991.98px) {
-                            // top: 8px;
-                        }
-
-                        // @media (max-width:479.98px) {
-                        //     top: 5px;
-                        // }
-
                         content: '';
                         border: solid black;
                         border-width: 0 2px 2px 0;
@@ -341,13 +217,11 @@ header {
                         transition: all 0.2s ease;
                     }
 
-
                     &:hover::after {
                         border-color: #ffd700;
                     }
 
                     .flag-item {
-
                         flex: 0 0 26px;
                         display: inline-block;
                         width: 36px;
@@ -357,23 +231,8 @@ header {
                         background-repeat: no-repeat;
                         border-radius: 5px;
 
-                        @media (max-width:991.98px) {
-
-                            // flex: 0 0 20px;
-                            // width: 27px;
-                            border-radius: 4px;
-                        }
-
-                        @media (max-width:479.98px) {
-
-                            // border-radius: 2px;
-                            // flex: 0 0 14px;
-                            // width: 20px;
-                        }
-
                         &.dropdown-lang {
                             background-image: url('../assets/images/header/united-kingdom-uk-svgrepo-com.svg');
-                            // display: none;
                             visibility: hidden;
                             opacity: 0;
                         }
@@ -381,7 +240,6 @@ header {
                         &:hover {
                             box-shadow: 0px 0px 6px 1px rgba(20, 20, 20, 0.4)
                         }
-
                     }
 
                     &:hover {
@@ -396,7 +254,6 @@ header {
                 }
             }
         }
-
     }
 
     .main-header-block {
@@ -427,8 +284,10 @@ header {
 
             }
 
+            // .......................................................................................
             @media (max-width:479.98px) {
                 padding: 7px 17px;
+                // ........................................................................
                 font-size: 12px;
 
                 .modal-opener-wrapper {
@@ -450,13 +309,11 @@ header {
             }
         }
 
-        ///// for all menus
         .menu-item {
             font-weight: 600;
             font-size: 16px;
         }
 
-        ///// 
         .main-logo-wrapper {
             min-width: 140px;
             height: 100px;
@@ -499,13 +356,11 @@ header {
 
 
             .menu-list {
+                display: flex;
+                align-items: center;
                 @media (max-width: 991.98px) {
                     display: none;
                 }
-
-                display: flex;
-                align-items: center;
-                // column-gap: 40px;
             }
 
             .menu-item {
@@ -514,7 +369,6 @@ header {
                 border-top: 2px solid transparent;
                 transition: all 0.25s ease-in-out;
                 font-weight: 400;
-
                 a {
                     display: inline-block;
                     width: 100%;
@@ -529,16 +383,9 @@ header {
                     margin-right: 40px;
                 }
 
-                transition: all 0.2s ease;
-
-                &:hover {
-                    // color: $main-color;
-                }
-
                 &.tab {
                     position: relative;
                     padding-right: 14px;
-
                     transition: all 0.2s ease;
 
                     &::after {
@@ -547,7 +394,7 @@ header {
                         right: 0;
                         content: '';
                         border: solid black;
-                        border-width: 0 3px 3px 0;
+                        border-width: 0 2px 2px 0;
                         display: inline-block;
                         padding: 3px;
                         transform: rotate(45deg);
