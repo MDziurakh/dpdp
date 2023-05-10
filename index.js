@@ -25,33 +25,13 @@ const ourTeamSwiper = new Swiper(".our-team__slider", {
   },
 });
 
-// datetime controller
-function getCurrentTime() {
-  const dateControl = document.querySelector(".main-form-datetime");
-  const today = new Date();
-  let nextHour = today.getHours() + 1;
-  // let minutes = today.getMinutes();
-  if (nextHour.toString().length == 1) {
-    nextHour = "0" + nextHour;
-  }
-  // if(minutes.toString().length == 1){
-  //   minutes = '0'+minutes;
-  // }
-
-  // const time = today.getHours().toString()+today.getMinutes().toString()
-  console.dir(nextHour);
-  console.log(today.toISOString().substring(0, 10) + "");
-  dateControl.min = `${today.toISOString().substring(0, 10) + ""}T14:00`;
-}
-// getCurrentTime();
-// для форми запису.
-
 // window.onload = function () {
   const mobileMenu = document.querySelector(".mobile-nav-menu");
   const hamburger = document.querySelector("#hamburger");
   hamburger.addEventListener("click", () => {
     mobileMenu.classList.toggle("open");
     hamburger.classList.toggle("open");
+    document.body.classList.toggle('no-scroll');
   });
 
   const tabs = document.querySelectorAll(".tab");
@@ -69,13 +49,11 @@ function getCurrentTime() {
       !targetElement.closest(".menu-item") &&
       !targetElement.closest(".mobile-nav-menu") &&
       mobileMenu.classList.contains("open") &&
-      !targetElement.closest(".hamburger") &&
+      !targetElement.closest("#hamburger") &&
       !targetElement.classList.contains("hamburger")
     ) {
       mobileMenu.classList.remove("open");
       hamburger.classList.remove("open");
     }
-  
-    // if(targetElement.)
   }
 // };

@@ -62,6 +62,9 @@ body {
     background-color: #f9f9f9;
     font-family: 'Gotham';
     height: 100%;
+    &.no-scroll{
+        overflow: hidden;
+    }
 }
 
 .container {
@@ -121,6 +124,7 @@ body {
 
 
 .wrapper {
+    position: relative;
     // margin: $total-header-height auto 0;
 }
 
