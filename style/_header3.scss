@@ -263,7 +263,7 @@ header {
         .container {
             display: flex;
             justify-content: space-between;
-            padding: 10px 40px;
+            padding: 5px 40px;
             position: relative;
             width: 100%;
 
@@ -284,14 +284,12 @@ header {
 
             }
 
-            // .......................................................................................
             @media (max-width:479.98px) {
-                padding: 7px 17px;
-                // ........................................................................
+                padding: 7px 10px;
                 font-size: 12px;
 
                 .modal-opener-wrapper {
-                    padding-right: 0px;
+                    padding-right: 10px;
                     justify-content: center;
                 }
 
@@ -315,39 +313,54 @@ header {
         }
 
         .main-logo-wrapper {
-            min-width: 140px;
-            height: 100px;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-image: url('../assets/logo/Logo_TDHC_ua.png');
-
-            @media (max-width:991.98px) {
-                // flex: 1;
-                background-image: url('../assets/logo/logo_gorizont_TDHC_ua.png');
-                height: 50px;
-                min-width: 370px;
-                background-position: center;
+            margin-right: 40px;
+            .main-logo {
+                display: block;
+                height: 100px;
+                img {
+                    height: 100%;
+                    max-width: 370px;
+                    object-fit: contain;
+                }
             }
 
-            @media (max-width:727.98px) {
-                width: auto;
-                min-width: 110px;
-                flex: 0;
-                // max-width: none;
-                height: 100px;
-                background-image: url('../assets/logo/Logo_TDHC_ua.png');
+            .vertical-logo-img{
+                height: 50px;
+            }
 
+           .horizont-logo-img{
+                display: none;
+            }
+
+            @media (max-width:991.98px) {
+                .main-logo {
+                    height: 50px;
+                }
+                .vertical-logo-img {
+                    display: none;
+                }
+                .horizont-logo-img {
+                    display: block;
+                }
+            }
+            
+            @media (max-width:767.98px) {
+                .main-logo {
+                    height: 90px;
+                }
+                .vertical-logo-img {
+                    display: block;
+                }
+                .horizont-logo-img {
+                    display: none;
+                }
             }
 
             @media (max-width:479.98px) {
-                min-width: 84px;
+                margin-right: 24px;
             }
 
-            .main-logo {
-                display: block;
-                height: 100%;
-                width: 100%;
-            }
+
         }
 
         .nav-menu {
@@ -358,6 +371,7 @@ header {
             .menu-list {
                 display: flex;
                 align-items: center;
+
                 @media (max-width: 991.98px) {
                     display: none;
                 }
@@ -369,6 +383,7 @@ header {
                 border-top: 2px solid transparent;
                 transition: all 0.25s ease-in-out;
                 font-weight: 400;
+
                 a {
                     display: inline-block;
                     width: 100%;
@@ -547,28 +562,20 @@ header {
     align-items: center;
     max-height: 0;
     row-gap: 40px;
-
-    // display: none;
-    // position: absolute;
-    // top: 40px;
-    // left: 0;
-    // // top: 70px; // logo height + paddings
-
-
+    padding: 20px 0;
     @media (max-width: 991.98px) {
         display: flex;
         max-height: 0;
-
     }
 
-    @media (max-width:727.98px) {
-        height: calc(100vh - 120px);
-        top: 120px; // logo height + paddings
+    @media (max-width:767.98px) {
+        height: calc(100vh - 110px);
+        top: 110px; // logo height + paddings
     }
 
     @media (max-width:479.98px) {
-        height: calc(100vh - 114px);
-        top: 114px; // logo height + paddings
+        height: calc(100vh - 104px);
+        top: 104px; // logo height + paddings
         // top: 114px; // logo height + paddings
     }
 
