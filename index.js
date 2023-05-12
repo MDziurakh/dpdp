@@ -25,35 +25,49 @@ const ourTeamSwiper = new Swiper(".our-team__slider", {
   },
 });
 
-// window.onload = function () {
-  const mobileMenu = document.querySelector(".mobile-nav-menu");
-  const hamburger = document.querySelector("#hamburger");
-  hamburger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("open");
-    hamburger.classList.toggle("open");
-    document.body.classList.toggle('no-scroll');
-  });
+const mobileMenu = document.querySelector(".mobile-nav-menu");
+const hamburger = document.querySelector("#hamburger");
+hamburger.addEventListener("click", () => {
+  mobileMenu.classList.toggle("open");
+  hamburger.classList.toggle("open");
+  document.body.classList.toggle("no-scroll");
+});
 
-  const tabs = document.querySelectorAll(".tab");
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      tab.classList.toggle("open");
-    });
+const tabs = document.querySelectorAll(".tab");
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    tab.classList.toggle("open");
   });
+});
 
-  
-  document.addEventListener("click", documentActions);
-  function documentActions(e) {
-    const targetElement = e.target;
-    if (
-      !targetElement.closest(".menu-item") &&
-      !targetElement.closest(".mobile-nav-menu") &&
-      mobileMenu.classList.contains("open") &&
-      !targetElement.closest("#hamburger") &&
-      !targetElement.classList.contains("hamburger")
-    ) {
-      mobileMenu.classList.remove("open");
-      hamburger.classList.remove("open");
-    }
+document.addEventListener("click", documentActions);
+function documentActions(e) {
+  const targetElement = e.target;
+  if (
+    !targetElement.closest(".menu-item") &&
+    !targetElement.closest(".mobile-nav-menu") &&
+    mobileMenu.classList.contains("open") &&
+    !targetElement.closest("#hamburger") &&
+    !targetElement.classList.contains("hamburger")
+  ) {
+    mobileMenu.classList.remove("open");
+    hamburger.classList.remove("open");
   }
-// };
+}
+
+window.onload = function () {
+  $('.popup-with-form').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		focus: '#name', 
+    callbacks: {
+			beforeOpen: function() {
+				if($(window).width() < 700) {
+					this.st.focus = false;
+				} else {
+					this.st.focus = '#name';
+				}
+			}
+		}
+	});
+};
