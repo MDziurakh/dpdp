@@ -1,19 +1,25 @@
-#popup-form{
+#popup-form {
     text-align: left;
     max-width: 650px;
     margin: 40px auto;
     position: relative;
-    @media (max-width: 479.98px){
-        padding: 10px 15px;
+
+    @media (max-width: 479.98px) {
+        // padding: 10px 15px;
     }
-    
-   
+
+
 }
 
 .mfp-content {
     padding: 0 20px !important;
     vertical-align: top !important;
-  }
-  .mfp-close {
-   font-size: 40px !important; 
+}
+
+.mfp-close {
+    font-size: 40px !important;
+
+    @media (max-width:747.98px) {
+        font-size: 28px !important;
+    }
 }

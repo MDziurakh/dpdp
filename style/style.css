@@ -1184,12 +1184,6 @@ header #hamburger.open span:nth-child(4) {
   margin: 40px auto;
   position: relative;
 }
-@media (max-width: 479.98px) {
-  #popup-form {
-    padding: 10px 15px;
-  }
-}
-
 .mfp-content {
   padding: 0 20px !important;
   vertical-align: top !important;
@@ -1197,6 +1191,11 @@ header #hamburger.open span:nth-child(4) {
 
 .mfp-close {
   font-size: 40px !important;
+}
+@media (max-width: 747.98px) {
+  .mfp-close {
+    font-size: 28px !important;
+  }
 }
 
 footer {
@@ -1301,7 +1300,7 @@ footer .footer__bottom .footer-social-media .footer-social-media__list a span sv
 
 .form {
   background: #FFF;
-  padding: 20px 30px;
+  padding: 20px;
   border-radius: 10px;
 }
 .form h2 {
