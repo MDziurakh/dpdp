@@ -71,3 +71,24 @@ window.onload = function () {
 		}
 	});
 };
+
+function getCurrentTime() {
+  const dateControl = document.querySelectorAll(".main-form-datetime");
+  const today = new Date();
+  let nextHour = today.getHours() + 1;
+  // let minutes = today.getMinutes();
+  if (nextHour.toString().length == 1) {
+    nextHour = "0" + nextHour;
+  }
+  // if(minutes.toString().length == 1){
+  //   minutes = '0'+minutes;
+  // }
+
+  // const time = today.getHours().toString()+today.getMinutes().toString()
+  console.dir(nextHour);
+  console.log(today.toISOString().substring(0, 10) + "");
+  // dateControl.value = `${today.toISOString().substring(0, 10) + ""}T14:00`;
+  dateControl.forEach(field => field.value = `${today.toISOString().substring(0, 10) + ""}T14:00`)
+}
+getCurrentTime();
+// для форми запису.
