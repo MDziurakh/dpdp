@@ -840,8 +840,11 @@ header #hamburger.open span:nth-child(4) {
 }
 
 .s-serviсes {
-  padding: 80px;
-  background-color: #ffffff;
+  padding: 40px 0;
+  background-color: #fff;
+}
+.s-serviсes .block-heading {
+  padding: 20px 0;
 }
 .s-serviсes .s-services-heading {
   padding-bottom: 80px;
@@ -849,82 +852,55 @@ header #hamburger.open span:nth-child(4) {
   background-position: center 70%;
   background-size: 40px;
 }
-.s-serviсes .s-services-heading h1 {
-  text-align: center;
-  font-size: 34px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
 .s-serviсes .services-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px 20px;
+  gap: 20px;
 }
-.s-serviсes .services-list .service-item {
-  min-height: 450px;
+.s-serviсes .service-item {
   border-radius: 10px;
-  padding: 30px 30px 15px;
-  background-color: rgb(255, 255, 255);
-  min-width: 350px;
-  width: 32%;
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-  box-shadow: 0 0px 41px -14px rgba(150, 170, 180, 0.5);
+  background-color: #f4f4f4;
+  width: 23%;
+  min-width: 245px;
   transition: all 0.3s ease-in-out;
 }
-.s-serviсes .services-list .service-item:hover {
-  background-color: #f0eded;
-  transform: translateY(-5px);
+@media (max-width: 991.98px) {
+  .s-serviсes .service-item {
+    min-width: 280px;
+  }
 }
-.s-serviсes .services-list .service-item:hover .service-item_image-block {
-  filter: none;
+.s-serviсes .service-item:hover {
+  box-shadow: 0 0px 43px 0px rgba(116, 140, 152, 0.7);
 }
-.s-serviсes .services-list .service-item .service-item_image-block {
-  border-radius: 10px;
-  box-shadow: 0 0 44px -6px #e1e1e1;
-  height: 200px;
+.s-serviсes .service-item .service-item_image-block {
+  border-radius: 10px 10px 0 0;
+  height: 170px;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
   transition: all 0.2s ease-in-out;
 }
-.s-serviсes .services-list .service-item .service-item_info-text-block {
-  height: 50%;
+.s-serviсes .service-item__inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.s-serviсes .service-item_info-text-block {
+  padding: 10px 10px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   text-align: center;
 }
-.s-serviсes .services-list .service-item .service-item_info-text-block .info-heading {
-  position: relative;
-  flex: 1;
-  font-size: 18px;
-  font-weight: 400;
+.s-serviсes .info-heading {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 0;
+  min-height: 80px;
 }
-.s-serviсes .services-list .service-item .service-item_info-text-block .info-heading::after {
-  position: absolute;
-  bottom: 15px;
-  display: block;
-  content: "";
-  width: 50%;
-  left: 50%;
-  margin-left: -25%;
-  height: 1px;
-  background-color: lightgray;
-}
-.s-serviсes .services-list .service-item .service-item_info-text-block .bottom-text-block {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: 50%;
-}
-.s-serviсes .services-list .service-item .service-item_info-text-block .bottom-text-block .a-btn {
-  margin-top: auto;
-}
-.s-serviсes .services-list .service-item .service-item_info-text-block .info-description {
+.s-serviсes .info-description {
   font-style: italic;
   font-size: 14px;
   font-weight: 400;
