@@ -1,62 +1,68 @@
 .s-small-about {
-    background-color: #ffffff;
-    padding: 80px 0;
+    background-color: #fff;
+    padding: 60px 0;
+
+    @media(max-width:767.98px) {
+        padding: 40px 0;
+    }
 
     .container {
         position: relative;
         max-width: 1100px;
         text-align: center;
-        background-position: center center;
+        background-position: center 35%;
         background-repeat: no-repeat;
-        background-size: 15%;
+        background-size: 120px;
     }
 
     .about__heading-block {
-        padding-bottom: 80px;
+        padding: 0 20px 40px;
         color: $blue-logo-color;
+        margin: 0 auto;
 
         * {
             line-height: 1.5;
         }
 
-        .motto {
+        .motto__end {
             letter-spacing: 1px;
             color: $brown-logo-color;
         }
-    }
-
-    .about__description-block {
-        padding-bottom: 80px;
-        font-size: 14px;
-        line-height: 2;
-        font-style: italic;
-    }
-
-    .popup-consultation-block {
-        .link-to-consultation {
-            font-weight: 600;
-            font-style: italic;
-            font-size: 14px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.2s ease-in-out;
-            svg {
-                transition: all 0.2s ease-in-out;
-                padding-left: 5px;
-                height: 30px;
-                width: auto;
+        @media(max-width:767.98px) {
+            .motto__start{
+                font-size: 16px;
             }
-
-            &:hover {
-                text-decoration: underline;
-                color: $brown-logo-color;
-
-                svg {
-                    stroke: $brown-logo-color;
-                }
+            .motto__end {
+                font-size: 20px;
             }
         }
+        @media(max-width:667.98px) {
+            max-width: 550px;
+        }
+        @media(max-width:479.98px) {
+            max-width: none;
+            padding: 0 0 20px;
+        }
     }
+    
+    .about__description-block {
+        padding: 0 20px 20px;
+        font-size: 14px;
+        line-height: 1.7;
+        font-style: italic;
+        max-width: 80%;
+        margin: 0 auto;
+        
+        @media(max-width:767.98px) {
+            max-width: none;
+        }
+        @media(max-width:479.98px) {
+            padding: 0 0 20px;
+        }
+    }
+}
 
+.popup-consultation-block {
+    // padding: 20px 0;
+    margin: 0 auto;
 }
