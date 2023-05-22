@@ -56,20 +56,21 @@ function documentActions(e) {
 }
 
 window.onload = function () {
-  $('.popup-with-form').magnificPopup({
-		type: 'inline',
-		preloader: false,
-		focus: '#name', 
+  $(".popup-with-form").magnificPopup({
+    type: "inline",
+    preloader: false,
+    fixedContentPos: true,
+    focus: "#name",
     callbacks: {
-			beforeOpen: function() {
-				if($(window).width() < 700) {
-					this.st.focus = false;
-				} else {
-					this.st.focus = '#name';
-				}
-			}
-		}
-	});
+      beforeOpen: function () {
+        if ($(window).width() < 700) {
+          this.st.focus = false;
+        } else {
+          this.st.focus = "#name";
+        }
+      },
+    },
+  });
 };
 
 function getCurrentTime() {
@@ -88,7 +89,14 @@ function getCurrentTime() {
   // console.dir(nextHour);
   // console.log(today.toISOString().substring(0, 8) + (+today.toISOString().substring(8,10)+1));
   // dateControl.value = `${today.toISOString().substring(0, 10) + ""}T14:00`;
-  dateControl.forEach(field => field.value = `${today.toISOString().substring(0, 8) + (+today.toISOString().substring(8,10)+1) + ""}T14:00`)
+  dateControl.forEach(
+    (field) =>
+      (field.value = `${
+        today.toISOString().substring(0, 8) +
+        (+today.toISOString().substring(8, 10) + 1) +
+        ""
+      }T14:00`)
+  );
 }
 getCurrentTime();
 // для форми запису.
