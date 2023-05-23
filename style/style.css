@@ -982,7 +982,7 @@ header #hamburger.open span:nth-child(4) {
   padding: 40px 0;
 }
 .s-our-team-main .our-team__heading {
-  padding: 40px 0;
+  padding: 20px 0;
   text-align: center;
 }
 .s-our-team-main .our-team__heading h2 {
@@ -1009,30 +1009,43 @@ header #hamburger.open span:nth-child(4) {
   height: auto;
 }
 .s-our-team-main .our-team__slider-container [class^=swiper-button-] svg {
-  border: 2px solid white;
+  border: 2px solid #e1aa4d;
   border-radius: 10px;
 }
-.s-our-team-main .our-team__slider-container [class^=swiper-button-]:hover svg {
-  border-color: #ddd8d8;
-}
-.s-our-team-main .our-team__slider-container [class^=swiper-button-]:hover svg * {
+.s-our-team-main .our-team__slider-container [class^=swiper-button-] svg * {
   transition: all 0.09s ease-in-out;
-  fill: #ddd8d8;
-  stroke: #ddd8d8;
+  fill: #e1aa4d;
+  stroke: #e1aa4d;
 }
 .s-our-team-main .swiper-slide {
-  padding: 40px 50px;
+  padding: 20px 50px;
   background-color: transparent;
   width: 60%;
+}
+@media (max-width: 747.98px) {
+  .s-our-team-main .swiper-slide {
+    padding: 20px;
+  }
 }
 .s-our-team-main .swiper-slide .slider-image {
   height: 347px;
   background-position: center top;
   background-size: cover;
 }
+@media (max-width: 747.98px) {
+  .s-our-team-main .swiper-slide .slider-image {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}
 .s-our-team-main .swiper-slide .slider-description {
   color: white;
   padding: 40px 0;
+}
+@media (max-width: 747.98px) {
+  .s-our-team-main .swiper-slide .slider-description {
+    padding: 20px 0;
+  }
 }
 .s-our-team-main .swiper-slide .slider-description > * {
   padding-bottom: 20px;

@@ -6,7 +6,7 @@ $slider-padding: 40px;
     padding: $slider-padding 0;
 
     .our-team__heading {
-        padding: 40px 0;
+        padding: 20px 0;
         text-align: center;
 
         h2 {
@@ -39,43 +39,65 @@ $slider-padding: 40px;
             height: auto;
 
             svg {
-                border: 2px solid white;
+                border: 2px solid #e1aa4d;
                 border-radius: 10px;
 
-            }
-
-            &:hover {
-                svg {
-                    border-color: #ddd8d8;
-
-                    * {
-                        transition: all .09s ease-in-out;
-                        fill: #ddd8d8;
-                        stroke: #ddd8d8;
-
-                    }
+                * {
+                    transition: all .09s ease-in-out;
+                    fill: #e1aa4d;
+                    stroke: #e1aa4d;
+    
                 }
             }
+
+        //     &:hover {
+        //         svg {
+        //             border-color: #e1aa4d;
+
+        //             * {
+        //                 transition: all .09s ease-in-out;
+        //                 fill: #e1aa4d;
+        //                 stroke: #e1aa4d;
+
+        //             }
+        //         }
+        //     }
         }
 
     }
 
     .swiper-slide {
-        padding: 40px 50px;
+        padding: 20px 50px;
         background-color: transparent;
         // height: 549px;
         // max-width: 320px;
         width: 60%;
 
+        @media(max-width:747.98px) {
+            padding: 20px;
+        }
+
         .slider-image {
             height: 347px;
             background-position: center top;
             background-size: cover;
+
+            @media(max-width:747.98px) {
+                max-width: 260px;
+                margin: 0 auto;
+            }
+
+            @media(max-width:559.98px) {
+            }
         }
 
         .slider-description {
             color: white;
             padding: 40px 0;
+
+            @media(max-width:747.98px) {
+                padding: 20px 0;
+            }
 
             >* {
                 padding-bottom: 20px;

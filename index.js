@@ -19,6 +19,13 @@ const ourTeamSwiper = new Swiper(".our-team__slider", {
   // autoplay: {
   //   delay: 230,
   // },
+  // when window width is >= 480px
+  slidesPerView:1,
+  breakpoints: {
+    560: {
+      slidesPerView: 2,
+    },
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
