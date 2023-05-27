@@ -559,7 +559,14 @@ header #hamburger.open span:nth-child(4) {
   background-image: url("../assets/images/header/plus-svgrepo-com.svg");
   background-size: cover;
   transition: all 0.2s ease;
-  margin-left: 20px;
+  margin-left: 10px;
+}
+@media (max-width: 479.98px) {
+  .mobile-nav-menu .menu-list .menu-item.tab > a::after {
+    top: 13px;
+    height: 14px;
+    width: 14px;
+  }
 }
 .mobile-nav-menu .menu-list .menu-item.tab .tab-content {
   max-height: 0;
@@ -612,23 +619,25 @@ header #hamburger.open span:nth-child(4) {
   background-size: contain;
   background-position: center;
 }
-.mobile-nav-menu .sticky-tel {
+
+.sticky-tel {
   position: fixed;
+  z-index: 200;
   bottom: 20px;
   right: -164px;
   transition: all 0.3s ease-in-out;
 }
 @media (max-width: 479.98px) {
-  .mobile-nav-menu .sticky-tel {
+  .sticky-tel {
     right: -164px;
   }
 }
 @media (max-width: 991.98px) {
-  .mobile-nav-menu .sticky-tel .sticky-tel__container {
+  .sticky-tel .sticky-tel__container {
     display: flex;
   }
 }
-.mobile-nav-menu .sticky-tel .sticky-tel__container .tel-icon-container {
+.sticky-tel .sticky-tel__container .tel-icon-container {
   width: 43px;
   height: -moz-fit-content;
   height: fit-content;
@@ -637,14 +646,14 @@ header #hamburger.open span:nth-child(4) {
   border-radius: 5px 0 0 5px;
   border-right: none;
 }
-.mobile-nav-menu .sticky-tel .sticky-tel__container .tel-icon-container .tel-icon {
+.sticky-tel .sticky-tel__container .tel-icon-container .tel-icon {
   height: 40px;
   width: 40px;
   background-image: url("../assets/images/header/sticky-phone-svgrepo-com.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
-.mobile-nav-menu .sticky-tel .sticky-tel__container .tels-container {
+.sticky-tel .sticky-tel__container .tels-container {
   border-radius: 0 0 0 5px;
   padding: 10px 20px;
   gap: 10px;
@@ -654,19 +663,19 @@ header #hamburger.open span:nth-child(4) {
   flex-direction: column;
   background-color: #f0f0f0;
 }
-.mobile-nav-menu .sticky-tel .sticky-tel__container .tels-container a {
+.sticky-tel .sticky-tel__container .tels-container a {
   width: -moz-max-content;
   width: max-content;
   padding: 5px;
   display: inline-block;
 }
-.mobile-nav-menu .sticky-tel .sticky-tel__container .tels-container a:hover {
+.sticky-tel .sticky-tel__container .tels-container a:hover {
   text-shadow: 0 0 5px #d0c6c6;
 }
-.mobile-nav-menu .sticky-tel:hover {
+.sticky-tel:hover {
   right: 0;
 }
-.mobile-nav-menu .sticky-tel:hover .tels-container {
+.sticky-tel:hover .tels-container {
   box-shadow: 0px 0 16px -10px black;
 }
 
@@ -697,11 +706,6 @@ header #hamburger.open span:nth-child(4) {
 @media (max-width: 767.98px) {
   .s-top-slider .top-slider [class^=swiper-button-] {
     width: 34px;
-  }
-}
-@media (max-width: 479.98px) {
-  .s-top-slider .top-slider [class^=swiper-button-] {
-    width: 24px;
   }
 }
 .s-top-slider .top-slider [class^=swiper-button-] svg {
@@ -779,16 +783,13 @@ header #hamburger.open span:nth-child(4) {
   }
 }
 @media (max-width: 479.98px) {
-  .s-top-slider .top-slider .caption-block {
-    padding: 5px;
-  }
   .s-top-slider .top-slider .caption-content {
     font-size: 14px;
   }
 }
 @media (max-width: 369.98px) {
   .s-top-slider .top-slider .caption-content {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
@@ -841,7 +842,7 @@ header #hamburger.open span:nth-child(4) {
 
 .s-serviсes {
   padding: 40px 0;
-  background-color: #fff;
+  background-color: #eaeaea;
 }
 .s-serviсes .block-heading {
   padding: 20px 0;
@@ -916,7 +917,6 @@ header #hamburger.open span:nth-child(4) {
   }
 }
 .s-small-about .container {
-  position: relative;
   max-width: 1100px;
   text-align: center;
   background-position: center 35%;
@@ -1351,7 +1351,6 @@ footer .footer__bottom .footer-social-media .footer-social-media__list a span sv
 }
 .form h2 {
   background: url("../assets/Screenshot_1.png") no-repeat top left;
-  mix-blend-mode: multiply;
   background-size: 60px;
   font-size: 20px;
   padding: 14px 65px;

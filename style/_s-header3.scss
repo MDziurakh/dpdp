@@ -622,7 +622,12 @@ header {
                     background-image: url('../assets/images/header/plus-svgrepo-com.svg');
                     background-size: cover;
                     transition: all .2s ease;
-                    margin-left: 20px;
+                    margin-left: 10px;
+                    @media (max-width:479.98px) {
+                        top: 13px;
+                        height: 14px;
+                        width: 14px;
+                    }
                 }
 
                 .tab-content {
@@ -693,83 +698,76 @@ header {
                 background-repeat: no-repeat;
                 background-size: contain;
                 background-position: center;
-
-                // @media (max-width:479.98px) {
-                //     // height: 30px;
-                //     // width: 30px;
-                // }
             }
         }
     }
+}
 
-    .sticky-tel {
-        position: fixed;
-        bottom: 20px;
+.sticky-tel {
+    position: fixed;
+    z-index: 200;
+    bottom: 20px;
+    right: -164px;
+
+    @media(max-width: 479.98px) {
         right: -164px;
 
-        @media(max-width: 479.98px) {
-            right: -164px;
+    }
 
+    transition: all 0.3s ease-in-out;
+
+    .sticky-tel__container {
+        @media (max-width: 991.98px) {
+            display: flex;
         }
 
-        transition: all 0.3s ease-in-out;
 
-        .sticky-tel__container {
-            @media (max-width: 991.98px) {
-                display: flex;
-            }
+        .tel-icon-container {
+            width: 43px;
+            height: fit-content;
+            background-color: #77B3D4;
+            border: 1px solid #349fda;
+            border-radius: 5px 0 0 5px;
+            border-right: none;
 
+            .tel-icon {
+                height: 40px;
+                width: 40px;
+                background-image: url('../assets/images/header/sticky-phone-svgrepo-com.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
 
-            .tel-icon-container {
-                width: 43px;
-                height: fit-content;
-                background-color: #77B3D4;
-                border: 1px solid #349fda;
-                border-radius: 5px 0 0 5px;
-                border-right: none;
-
-                .tel-icon {
-                    height: 40px;
-                    width: 40px;
-                    background-image: url('../assets/images/header/sticky-phone-svgrepo-com.svg');
-                    background-size: contain;
-                    background-repeat: no-repeat;
-
-                }
-            }
-
-            .tels-container {
-
-                border-radius: 0 0 0 5px;
-                padding: 10px 20px;
-                gap: 10px;
-                border: 1px solid #349fda;
-                border-right: none;
-                display: flex;
-                flex-direction: column;
-                background-color: #f0f0f0;
-
-                a {
-                    width: max-content;
-                    padding: 5px;
-                    display: inline-block;
-
-                    &:hover {
-                        text-shadow: 0 0 5px $header-color;
-                    }
-                }
             }
         }
 
-        &:hover {
-            right: 0;
+        .tels-container {
 
-            .tels-container {
-                box-shadow: 0px 0 16px -10px black;
+            border-radius: 0 0 0 5px;
+            padding: 10px 20px;
+            gap: 10px;
+            border: 1px solid #349fda;
+            border-right: none;
+            display: flex;
+            flex-direction: column;
+            background-color: #f0f0f0;
+
+            a {
+                width: max-content;
+                padding: 5px;
+                display: inline-block;
+
+                &:hover {
+                    text-shadow: 0 0 5px $header-color;
+                }
             }
         }
     }
 
+    &:hover {
+        right: 0;
 
-
+        .tels-container {
+            box-shadow: 0px 0 16px -10px black;
+        }
+    }
 }
