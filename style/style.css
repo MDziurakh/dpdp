@@ -1209,6 +1209,7 @@ header #hamburger.open span:nth-child(4) {
 
 .s-images-gallery {
   background-color: #fff;
+  padding: 20px 0;
 }
 @media (max-width: 600px) {
   .s-images-gallery .container {
@@ -1221,7 +1222,7 @@ header #hamburger.open span:nth-child(4) {
   }
 }
 .s-images-gallery .block-heading {
-  padding: 40px 0 20px;
+  padding: 20px 0;
 }
 .s-images-gallery .gallery {
   -moz-column-count: 3;
