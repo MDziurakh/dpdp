@@ -1,37 +1,69 @@
 .s-top-articles {
-    background-color: rgb(249, 249, 249);
+    background-color: #e4e4e4;
     padding: 40px 0;
 
     .container {
-        // padding: 40px 20px;
-        // background-color: white;
+        padding: 0 20px;
         text-align: center;
+
+        @media (max-width: 481.98px) {
+            padding: 0 15px;
+        }
     }
 }
 
 .s-top-articles__heading {
     text-align: center;
-    padding: 40px 0;
+    padding: 20px 0;
 
 }
 
 .top-articles-wrapper {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    // display: flex;
+    // justify-content: center;
+    // flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    justify-items: center;
+
+    @media (max-width: 991.98px) {
+        grid-template-columns: repeat(2, 1fr);
+
+        >:nth-child(odd) {
+            justify-self: right;
+        }
+
+        >:nth-child(even) {
+            justify-self: left;
+        }
+    }
+
+    @media (max-width: 681.98px) {
+        gap: 15px;
+    }
+
+    @media (max-width: 431.98px) {
+        grid-template-columns: 1fr;
+        >*{
+            justify-self: center !important;
+        }
+        
+    }
 }
 
 .top-article-item {
     border-radius: 20px;
     background-color: white;
     color: darken($color: $brown-logo-color, $amount: 20);
-    width: 20%;
-    // min-width: 300px;
-    min-width: 220px;
     min-height: 100%;
     border-radius: 15px;
+    width: 100%;
+    max-width: 290px;
+    @media (max-width: 431.98px) {
+        max-width: 230px;
+    }
 
     &:hover {
         transition: all 0.3s ease-in-out;
@@ -49,15 +81,28 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 10px 20px 20px;
+    padding: 10px;
 }
 
 .top-article__image-block {
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
-    height: 200px;
+    height: 170px;
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+
+    @media (max-width: 601.98px) {
+        height: 175px;
+    }
+
+    @media (max-width: 551.98px) {
+        height: 150px;
+    }
+
+    @media (max-width: 481.98px) {
+        height: 130px;
+    }
 }
 
 .date-block {
@@ -83,12 +128,12 @@
     }
 
     p:after {
-        right: 13%;
+        right: 5%;
 
     }
 
     p:before {
-        left: 13%;
+        left: 5%;
 
     }
 }
@@ -108,6 +153,6 @@
 
 }
 
-.show-more{
-    padding: 40px 0;
+.show-more {
+    padding: 20px 0;
 }
