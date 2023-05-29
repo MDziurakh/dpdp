@@ -778,6 +778,7 @@ header #hamburger.open span:nth-child(4) {
 @media (max-width: 767.98px) {
   .s-top-slider .top-slider .caption-block {
     padding: 10px;
+    max-width: 60%;
   }
 }
 @media (max-width: 479.98px) {
