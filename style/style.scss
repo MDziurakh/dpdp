@@ -7,7 +7,7 @@
 @import 's-header3';
 
 @import 's-top-slider';
-@import 's-text-image';
+// @import 's-text-image';
 @import 's-services';
 @import 's-small-about';
 @import 's-our-team-main';
@@ -72,6 +72,10 @@ body {
     height: 100%;
     &.no-scroll{
         overflow: hidden;
+    }
+
+    @media (max-width:991.98px) {
+        overflow-x: hidden;
     }
 }
 
