@@ -20,7 +20,7 @@ const ourTeamSwiper = new Swiper(".our-team__slider", {
   //   delay: 230,
   // },
   // when window width is >= 480px
-  slidesPerView:1,
+  slidesPerView: 1,
   breakpoints: {
     560: {
       slidesPerView: 2,
@@ -80,29 +80,22 @@ window.onload = function () {
   });
 };
 
+// для форми запису.
 function getCurrentTime() {
   const dateControl = document.querySelectorAll(".main-form-datetime");
   const today = new Date();
-  let nextHour = today.getHours() + 1;
-  // let minutes = today.getMinutes();
-  if (nextHour.toString().length == 1) {
-    nextHour = "0" + nextHour;
+  let tomorrow;
+  if (
+    today.getDate().toString().length == 1 &&
+    today.getDate().toString() != "9"
+  ) {
+    tomorrow = "0" + (+today.getDate() + 1);
+  } else {
+    tomorrow = today.getDate().toString();
   }
-  // if(minutes.toString().length == 1){
-  //   minutes = '0'+minutes;
-  // }
-
-  // const time = today.getHours().toString()+today.getMinutes().toString()
-  // console.dir(nextHour);
-  // console.log(today.toISOString().substring(0, 8) + (+today.toISOString().substring(8,10)+1));
-  // dateControl.value = `${today.toISOString().substring(0, 10) + ""}T14:00`;
   dateControl.forEach(
     (field) =>
-      (field.value = `${
-        today.toISOString().substring(0, 8) +
-        (+today.toISOString().substring(8, 10) + 1) +
-        ""
-      }T14:00`)
+      (field.value = `${today.toISOString().substring(0, 8) + tomorrow}T14:00`)
   );
 }
 getCurrentTime();
