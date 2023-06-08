@@ -110,6 +110,7 @@
 }
 
 body {
+  scroll-behavior: smooth;
   background-color: #f9f9f9;
   font-family: "Gotham";
 }/*# sourceMappingURL=style.css.map */
