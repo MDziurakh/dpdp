@@ -5,11 +5,7 @@
 
     .container {
         @media(max-width:600px) {
-            padding: 0 12px;
-        }
-
-        @media(max-width:479.98px) {
-            padding: 0 10px;
+            // padding: 0 12px;
         }
     }
 
@@ -24,14 +20,15 @@
         @media(max-width:600px) {
             column-count: 2;
         }
-
+        
         @media(max-width:479.98px) {
-            column-gap: 5px;
+            column-count: 1;
         }
 
         a {
             @media(max-width:479.98px) {
-                margin-bottom: 0;
+                // margin-bottom: 0;
+                pointer-events: none;
             }
 
             margin-bottom: 5px;

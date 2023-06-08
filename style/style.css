@@ -627,11 +627,6 @@ header #hamburger.open span:nth-child(4) {
   right: -164px;
   transition: all 0.3s ease-in-out;
 }
-@media (max-width: 479.98px) {
-  .sticky-tel {
-    right: -164px;
-  }
-}
 @media (max-width: 991.98px) {
   .sticky-tel .sticky-tel__container {
     display: flex;
@@ -1168,16 +1163,6 @@ header #hamburger.open span:nth-child(4) {
   background-color: #fff;
   padding: 20px 0;
 }
-@media (max-width: 600px) {
-  .s-images-gallery .container {
-    padding: 0 12px;
-  }
-}
-@media (max-width: 479.98px) {
-  .s-images-gallery .container {
-    padding: 0 10px;
-  }
-}
 .s-images-gallery .block-heading {
   padding: 20px 0;
 }
@@ -1195,8 +1180,8 @@ header #hamburger.open span:nth-child(4) {
 }
 @media (max-width: 479.98px) {
   .s-images-gallery .gallery {
-    -moz-column-gap: 5px;
-         column-gap: 5px;
+    -moz-column-count: 1;
+         column-count: 1;
   }
 }
 .s-images-gallery .gallery a {
@@ -1208,7 +1193,7 @@ header #hamburger.open span:nth-child(4) {
 }
 @media (max-width: 479.98px) {
   .s-images-gallery .gallery a {
-    margin-bottom: 0;
+    pointer-events: none;
   }
 }
 .s-images-gallery .gallery a img {
@@ -1455,6 +1440,9 @@ footer .footer__bottom .footer-social-media .footer-social-media__list a span sv
 .contact-form-wrapper input[type=datetime-local],
 .contact-form-wrapper textarea {
   background-color: #f7f4f4;
+}
+.contact-form-wrapper input[type=datetime-local] {
+  padding-right: 20px;
 }
 .contact-form-wrapper input[type=submit] {
   border-radius: 10px;

@@ -677,9 +677,6 @@ header {
     }
 
     .social-media-block {
-        // @media (max-width:479.98px) {
-        // }
-
         .social-media-container {
             display: flex;
             justify-content: center;
@@ -708,12 +705,6 @@ header {
     z-index: 200;
     bottom: 20px;
     right: -164px;
-
-    @media(max-width: 479.98px) {
-        right: -164px;
-
-    }
-
     transition: all 0.3s ease-in-out;
 
     .sticky-tel__container {

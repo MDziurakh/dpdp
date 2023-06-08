@@ -2,9 +2,9 @@ const topSwiper = new Swiper(".top-slider", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
-  // autoplay: {
-  //   delay: 4000,
-  // },
+  autoplay: {
+    delay: 4000,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -16,9 +16,9 @@ const ourTeamSwiper = new Swiper(".our-team__slider", {
   slidesPerView: 2,
   direction: "horizontal",
   loop: true,
-  // autoplay: {
-  //   delay: 230,
-  // },
+  autoplay: {
+    delay: 4000,
+  },
   // when window width is >= 480px
   slidesPerView: 1,
   breakpoints: {
