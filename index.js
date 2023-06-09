@@ -85,18 +85,54 @@ function getCurrentTime() {
   const dateControl = document.querySelectorAll(".main-form-datetime");
   const today = new Date();
   let tomorrow;
-  if (
-    today.getDate().toString().length == 1 &&
-    today.getDate().toString() != "9"
-  ) {
+  if (today.getDate().toString() == "9") {
+    tomorrow = '10';
+  }
+  else if (today.getDate().toString().length == 1) {
     tomorrow = "0" + (+today.getDate() + 1);
   } else {
     tomorrow = today.getDate().toString();
   }
   dateControl.forEach(
     (field) =>
-      (field.value = `${today.toISOString().substring(0, 8) + tomorrow}T14:00`)
+      (field.value = `${today.toISOString().substring(0, 8) + tomorrow}T12:00`)
   );
 }
 getCurrentTime();
 // для форми запису.
+
+
+const showMoreImagesBtn = document.querySelector(".show-more-images");
+const galleryItems = document.querySelectorAll(".gallery__item-outer");
+let basicImagesCount = 4;
+let currentImagesCount = 4;
+if (window.innerWidth < 482) {
+  for (let i = basicImagesCount; i < galleryItems.length; i++) {
+    galleryItems[i].classList.add("hide");
+  }
+}
+
+function showMoreImages() {
+  currentImagesCount = currentImagesCount + 2;
+
+  for (let i = basicImagesCount; i < currentImagesCount; i++) {
+    if (i >= galleryItems.length) {
+      showMoreImagesBtn.innerHTML = "Показати менше";
+      showMoreImagesBtn.removeEventListener("click", showMoreImages);
+      showMoreImagesBtn.addEventListener("click", hideImages);
+      return;
+    }
+    galleryItems[i].classList.remove("hide");
+  }
+}
+function hideImages() {
+  currentImagesCount = 4;
+  for (let i = basicImagesCount; i < galleryItems.length; i++) {
+    galleryItems[i].classList.add("hide");
+  }
+  showMoreImagesBtn.innerHTML = "Показати ще";
+  showMoreImagesBtn.removeEventListener("click", hideImages);
+  showMoreImagesBtn.addEventListener("click", showMoreImages);
+}
+
+showMoreImagesBtn.addEventListener("click", showMoreImages);
