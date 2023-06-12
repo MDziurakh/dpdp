@@ -1,0 +1,103 @@
+.sticky-block {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    bottom: 20px;
+    right: -164px;
+    transition: all 0.3s ease-in-out;
+    flex-direction: column;
+    align-items: end;
+    @media (max-width: 991.98px) {
+        display: flex;
+    }
+
+    .tel-icon-container {
+        position: absolute;
+        bottom: 87px;
+        right: 163px;
+        width: 43px;
+        height: fit-content;
+        background-color: #77B3D4;
+        border: 1px solid #349fda;
+        border-radius: 5px 0 0 5px;
+        border-right: none;
+
+        .tel-icon {
+            height: 40px;
+            width: 40px;
+            background-image: url('../assets/images/header/sticky-phone-svgrepo-com.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+
+        }
+    }
+
+    .sticky-tel__container {
+        @media (max-width: 991.98px) {
+            display: flex;
+        }
+
+        .tels-container {
+            width: 163px;
+            height: 129.2px;
+            border-radius: 0 0 0 5px;
+            padding: 10px 20px;
+            gap: 10px;
+            border: 1px solid #349fda;
+            border-right: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+
+            a {
+                width: max-content;
+                padding: 5px;
+                display: inline-block;
+
+                &:hover {
+                    text-shadow: 0 0 5px $header-color;
+                }
+            }
+        }
+    }
+
+    &.open {
+        right: 0;
+        .tel-icon {
+            background-image: url('../assets/images/header/arrow-right-lg-svgrepo-com.svg');
+        }
+
+        .tels-container {
+            box-shadow: 0px 0 16px -10px black;
+        }
+    }
+}
+
+.sticky-social-media {
+    display: flex;
+    width: min-content;
+    margin-bottom: 10px;
+
+
+    .social-media-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social-media-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+.social-media-icon {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

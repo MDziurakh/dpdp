@@ -47,21 +47,6 @@ tabs.forEach((tab) => {
   });
 });
 
-document.addEventListener("click", documentActions);
-function documentActions(e) {
-  const targetElement = e.target;
-  if (
-    !targetElement.closest(".menu-item") &&
-    !targetElement.closest(".mobile-nav-menu") &&
-    mobileMenu.classList.contains("open") &&
-    !targetElement.closest("#hamburger") &&
-    !targetElement.classList.contains("hamburger")
-  ) {
-    mobileMenu.classList.remove("open");
-    hamburger.classList.remove("open");
-  }
-}
-
 window.onload = function () {
   $(".popup-with-form").magnificPopup({
     type: "inline",
@@ -80,15 +65,14 @@ window.onload = function () {
   });
 };
 
-// для форми запису.
+/////////// для форми запису.
 function getCurrentTime() {
   const dateControl = document.querySelectorAll(".main-form-datetime");
   const today = new Date();
   let tomorrow;
   if (today.getDate().toString() == "9") {
-    tomorrow = '10';
-  }
-  else if (today.getDate().toString().length == 1) {
+    tomorrow = "10";
+  } else if (today.getDate().toString().length == 1) {
     tomorrow = "0" + (+today.getDate() + 1);
   } else {
     tomorrow = today.getDate().toString();
@@ -99,9 +83,9 @@ function getCurrentTime() {
   );
 }
 getCurrentTime();
-// для форми запису.
+/////////////// для форми запису.
 
-
+///////////// gallery func
 const showMoreImagesBtn = document.querySelector(".show-more-images");
 const galleryItems = document.querySelectorAll(".gallery__item-outer");
 let basicImagesCount = 4;
@@ -136,3 +120,29 @@ function hideImages() {
 }
 
 showMoreImagesBtn.addEventListener("click", showMoreImages);
+///////////////////////
+
+////////////// sticky block func
+const stickyBlock = document.querySelector(".sticky-block");
+const stickyBlockOpener = document
+  .querySelector(".tel-icon")
+  .addEventListener("click", () => {
+    stickyBlock.classList.toggle("open");
+  });
+
+document.addEventListener("click", documentActions);
+function documentActions(e) {
+  const targetElement = e.target;
+  if (
+    stickyBlock.classList.contains('open') &&
+    targetElement.closest(".open") && 
+    !targetElement.closest(".tel-icon") ||  
+    !targetElement.closest(".open") 
+    // targetElement.closest(".sticky-tel__container") ||
+    // targetElement.closest(".sticky-social-media")
+  ) {
+    stickyBlock.classList.remove("open");
+  }
+}
+
+/////////////////
