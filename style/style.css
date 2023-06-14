@@ -1274,6 +1274,9 @@ footer .footer__middle .footer__middle-item a {
   display: inline-flex;
   align-items: center;
 }
+footer .footer__middle .footer__middle-item a:hover {
+  text-shadow: 0 0 5px #d0c6c6;
+}
 @media (max-width: 647.98px) {
   footer .footer__middle {
     flex-direction: column;
@@ -1314,7 +1317,7 @@ footer .middle__tels .contact-link-wrapper .tels-container {
   row-gap: 12px;
 }
 footer .middle__tels .contact-link-wrapper .tel:hover {
-  text-shadow: 0px 1px 3px #86776f;
+  text-shadow: 0 0 5px #d0c6c6;
 }
 footer .footer__bottom {
   padding: 25px 0;

@@ -45,6 +45,9 @@ footer {
                 line-height: 18px;
                 display: inline-flex;
                 align-items: center;
+                &:hover{
+                    text-shadow: 0 0 5px $header-color;
+                }
             }
         }
 
@@ -94,7 +97,7 @@ footer {
             }
 
             .tel:hover {
-                text-shadow: 0px 1px 3px $brown-logo-color;
+                text-shadow: 0 0 5px $header-color;
             }
 
 
