@@ -4,7 +4,9 @@ $slider-padding: 40px;
 .s-our-team-main {
     min-height: 40vh;
     padding: $slider-padding 0;
-
+    @media (max-width:479.98px) {
+        padding: 20px 0;
+    }
     .our-team__heading {
         padding: 20px 0;
         text-align: center;
