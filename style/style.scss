@@ -150,17 +150,17 @@ body {
     // background:linear-gradient(161.33deg, #4D6677 11.43%, rgba(77, 102, 119, 0.46) 74.42%);
     padding: 13px 24px;
     border-radius: 10px;
-    background: linear-gradient(294deg, #3a5e76 1.43%, #4d667775 99.42%);
-    background-size:420%;  
-    background-repeat: no-repeat;
+    background: linear-gradient(294deg, #3a5e76 100%, rgb(34 89 128 / 100%) 100%);;
+    filter: opacity(0.8);
     cursor: pointer;
     color: white;
     text-align: center;
-    
     transition: all 0.3s ease-in-out;
+    @media(max-width:991.98px){
+        filter: none;
+    }
     &:hover{
-        // background: linear-gradient(294deg, #4D6677 11.43%, rgba(77, 102, 119, 0.46) 74.42%);;
-        background-size:100%;  
+        filter: none;
     }
      @media (max-width:1099.98px) {
         padding: 8px 15px;

@@ -120,6 +120,7 @@ header {
             }
 
             &:hover {
+                cursor: pointer;
                 .svg-icon-container {
                     filter: none;
                 }

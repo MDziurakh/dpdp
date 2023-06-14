@@ -144,6 +144,9 @@ header .top-contact-block .top-contact-block__item .svg-icon-container {
   background-position: center;
   filter: grayscale(66%);
 }
+header .top-contact-block .top-contact-block__item:hover {
+  cursor: pointer;
+}
 header .top-contact-block .top-contact-block__item:hover .svg-icon-container {
   filter: none;
 }
@@ -1024,7 +1027,7 @@ header #hamburger.open span:nth-child(4) {
 }
 .top-article-item:hover {
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 20px -10px #86776f;
+  box-shadow: 0 0px 43px 0px rgba(116, 140, 152, 0.7);
 }
 .top-article-item a {
   display: flex;
@@ -1716,16 +1719,20 @@ body.no-scroll {
   display: inline-block;
   padding: 13px 24px;
   border-radius: 10px;
-  background: linear-gradient(294deg, #3a5e76 1.43%, rgba(77, 102, 119, 0.4588235294) 99.42%);
-  background-size: 420%;
-  background-repeat: no-repeat;
+  background: linear-gradient(294deg, #3a5e76 100%, rgb(34, 89, 128) 100%);
+  filter: opacity(0.8);
   cursor: pointer;
   color: white;
   text-align: center;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 991.98px) {
+  .interactive-btn {
+    filter: none;
+  }
+}
 .interactive-btn:hover {
-  background-size: 100%;
+  filter: none;
 }
 @media (max-width: 1099.98px) {
   .interactive-btn {
