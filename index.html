@@ -191,11 +191,11 @@
             </div>
 
         </nav>
-        <main>
-            <div id="popup-form" class="mfp-hide">
-                <div class="popup-form-inner form">
-                    <h2 class="block-heading no-link">Записатись на прийом!</h2>
-                    <div class="contact-form-wrapper">
+        <div id="popup-form" class="mfp-hide">
+            <div class="popup-form-inner form">
+                <h2 class="block-heading">Записатись на прийом!</h2>
+                <div class="contact-form-wrapper">
+                    <div class="one-line-inputs-container">
                         <div class="c-form-field  input-holder">
                             <input type="text" name="first-name" placeholder="Ім'я та прізвище">
                         </div>
@@ -209,34 +209,69 @@
                             <span>Вкажіть бажаний час прийому</span>
                             <input type="datetime-local" name="datetime" class="main-form-datetime">
                         </div>
-                        <div class="c-form-field textarea-holder">
-                            <textarea name="message" placeholder="Яку проблему очікуєте вирішити?"></textarea>
-                        </div>
-                        <div class="c-form-field">
-                            <input class="interactive-btn" type="submit" value="Записатись">
-                        </div>
+                    </div>
+                    <div class="c-form-field textarea-holder">
+                        <textarea name="message" placeholder="Яку проблему очікуєте вирішити?"></textarea>
+                    </div>
+                    <div class="c-form-field">
+                        <input class="interactive-btn" type="submit" value="Записатись">
                     </div>
                 </div>
             </div>
+        </div>
+        <main>
             <section class="s-top-slider">
                 <div class="swiper top-slider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide slide-item">
-                            <img src="assets/images/main-slider/cabinet.webp" alt="cabinet">
-                            <a class="caption-block" href="#">
-                                <p class="caption-content">Атипові видалення (складна хірургія) - видалення зубів
-                                    `мудрості`</p>
-                            </a>
+                            <div class="c-top-slider-slide"
+                                style="background-image: url('assets/images/main-slider/1.jpg');">
+                                <div class="container caption-wrapper">
+                                    <a class="caption-block" href="#">
+                                        <p class="caption-content">Атипові видалення (складна хірургія) - видалення
+                                            зубів `мудрості`</p>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <div class="swiper-slide slide-item">
-                            <img src="assets/images/main-slider/founders.webp" alt="founders">
-                            <a class="caption-block" href="#">
-                                <p class="caption-content">Протезування зубів. Коронки, вініри в стоматології Демідов та
-                                    Потеряйко в Ірпені</p>
-                            </a>
+                            <div class="c-top-slider-slide"
+                                style="background-image: url('assets/images/main-slider/2.jpg');">
+                                <div class="container caption-wrapper">
+                                    <a class="caption-block" href="#">
+                                        <p class="caption-content">Атипові видалення (складна хірургія) - видалення
+                                            зубів `мудрості`</p>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <div class="swiper-slide slide-item">
-                            <img src="assets/images/main-slider/exterior.jpg" alt="exterior">
+                            <div class="c-top-slider-slide"
+                                style="background-image: url('assets/images/main-slider/3.jpg');">
+                                <div class="container caption-wrapper">
+                                    <a class="caption-block" href="#">
+                                        <p class="caption-content">Протезування зубів. Коронки, вініри в стоматології
+                                            Демідов та
+                                            Потеряйко в Ірпені</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide-item">
+                            <div class="c-top-slider-slide"
+                                style="background-image: url('assets/images/main-slider/cabinet.webp');">
+                            </div>
+                        </div>
+                        <div class="swiper-slide slide-item">
+                            <div class="c-top-slider-slide"
+                                style="background-image: url('assets/images/main-slider/founders.png');">
+                                <div class="container caption-wrapper">
+                                    <a class="caption-block" href="#">
+                                        <p class="caption-content">Атипові видалення (складна хірургія) - видалення
+                                            зубів `мудрості`</p>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-button-prev">
@@ -270,9 +305,9 @@
                     </div>
                 </div>
             </section>
-            <section class="s-serviсes">
+            <section class="s-serviсes section-padding">
                 <div class="container">
-                    <h2 class="block-heading no-link">Наші послуги</h2>
+                    <h2 class="block-heading">Наші послуги</h2>
                     <div class="services-list">
                         <div class="service-item">
                             <a href="" class="service-item__inner">
@@ -421,7 +456,7 @@
                     </div>
                 </div>
             </section>
-            <section class="s-small-about">
+            <section class="s-small-about section-padding">
                 <div class="container" style="background-image: url('assets/images/s-small-about/tooth.png');">
                     <div class="about__heading-block">
                         <h3 class="motto__start">ЛІКУВАННЯ ЗУБІВ В СТОМАТОЛОГІЇ
@@ -442,12 +477,12 @@
                     </div>
                 </div>
             </section>
-            <section class="s-our-team-main"
+            <section class="s-our-team-main section-padding"
                 style="background-image: url(assets/images/s-our-team-main/our-team-background.jpg);">
                 <div class="container">
                     <div class="our-team__heading">
-                        <h2>
-                            <a class="block-heading" href="">Обличчя клініки</a>
+                        <h2 class="block-heading">
+                            Обличчя клініки
                         </h2>
                     </div>
                     <div class="our-team__slider-container">
@@ -610,9 +645,9 @@
                     </div>
                 </div>
             </section>
-            <section class="s-top-articles">
+            <section class="s-top-articles section-padding">
                 <div class="container">
-                    <h2 class="s-top-articles__heading"><a class="block-heading" href="#">Варто знати</a></h2>
+                    <h2 class="block-heading">Варто знати</h2>
                     <div class="top-articles-wrapper">
                         <div class="top-article-item">
                             <a href="#">
@@ -699,9 +734,9 @@
                     </div>
                 </div>
             </section>
-            <section class="s-images-gallery">
+            <section class="s-images-gallery section-padding">
                 <div class="container">
-                    <h2 class="block-heading no-link">Галерея</h2>
+                    <h2 class="block-heading">Галерея</h2>
                     <div class="gallery">
                         <a href="assets/images/s-images-gallery/1.webp" class="gallery__item-outer">
                             <img src="assets/images/s-images-gallery/1.webp" alt="" class="gallery__item-inner">
@@ -737,30 +772,34 @@
                     <a class="interactive-btn show-more-images">Показати ще</a>
                 </div>
             </section>
-            <section class="s-contact-us">
+            <section class="s-contact-us section-padding">
                 <div class="container">
-                    <h2 class="block-heading no-link">Напишіть нам</h2>
+                    <h2 class="block-heading">Напишіть нам</h2>
                     <div class="map-form-block">
                         <div class="contact-us-form form">
-                            <h2 class="block-heading no-link">Записатись на прийом!</h2>
+                            <h2 class="block-heading">Записатись на прийом!</h2>
                             <div class="contact-form-wrapper">
-                                <div class="c-form-field half">
-                                    <input type="text" name="first-name" placeholder="Ім'я та прізвище">
+                                <div class="one-line-inputs-container">
 
-                                </div>
-                                <div class="c-form-field half">
-                                    <input type="email" name="email" placeholder="e-mail">
+                                    <div class="c-form-field half">
+                                        <input type="text" name="first-name" placeholder="Ім'я та прізвище">
 
-                                </div>
-                                <div class="c-form-field half">
-                                    <input type="tel" name="tel" placeholder="Телефон">
+                                    </div>
+                                    <div class="c-form-field half">
+                                        <input type="email" name="email" placeholder="e-mail">
 
-                                </div>
-                                <div class="c-form-field half datetime-wrapper">
-                                    <span>Вкажіть бажаний час прийому</span>
-                                    <input type="datetime-local" name="datetime" class="main-form-datetime">
+                                    </div>
+                                    <div class="c-form-field half">
+                                        <input type="tel" name="tel" placeholder="Телефон">
 
+                                    </div>
+                                    <div class="c-form-field half datetime-wrapper">
+                                        <span>Вкажіть бажаний час прийому</span>
+                                        <input type="datetime-local" name="datetime" class="main-form-datetime">
+
+                                    </div>
                                 </div>
+
                                 <div class="c-form-field full">
                                     <textarea name="message" placeholder="Яку проблему очікуєте вирішити?"></textarea>
 
@@ -778,7 +817,7 @@
                 </div>
             </section>
         </main>
-        <footer>
+        <footer class="section-padding">
             <div class="container">
                 <div class="footer__top">
                     <div class="logo-wrapper">
@@ -790,34 +829,6 @@
                         <a class="interactive-btn popup-with-form" href="#popup-form">Записатись на прийом</a>
                     </div>
                 </div>
-                <div class="footer__middle">
-                    <div class="middle__adress footer__middle-item">
-                        <a href="https://goo.gl/maps/4m2ZHtNC1MR6FL9Q6" target="_blank" class="contact-link-wrapper">
-                            <span class="footer-contact-icon location-icon"></span>
-                            <span class="location">
-                                м. Ірпінь, вулиця Соборна, 118/19
-                            </span>
-                        </a>
-                    </div>
-                    <div class="middle__email footer__middle-item">
-                        <a href="mailto:info@dpdp.com.ua" target="_blank" class="contact-link-wrapper">
-                            <span class="email-icon footer-contact-icon"></span>
-                            <span class="email">
-                                info@dpdp.com.ua
-                            </span>
-                        </a>
-                    </div>
-                    <div class="middle__tels footer__middle-item">
-                        <div class="contact-link-wrapper" target="_blank">
-                            <span class="footer-contact-icon tel-icon"></span>
-                            <div class="tels-container">
-                                <a href=""><span class="tel">067 117 29 22</span></a>
-                                <a href=""><span class="tel">067 117 29 22</span></a>
-                                <a href=""><span class="tel">067 117 29 22</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="footer__bottom">
                     <div class="footer__bottom-item footer-menu">
                         <ul class="footer-menu__list">
@@ -826,10 +837,19 @@
                             <li class="footer-menu__item"><a>Наша команда</a></li>
                             <li class="footer-menu__item"><a>Про нас</a></li>
                             <li class="footer-menu__item"><a>Новини</a></li>
-                            <li class="footer-menu__item"><a>Статті</a></li>
-                            <li class="footer-menu__item"><a>Цікаві запитання</a></li>
-                            <li class="footer-menu__item"><a>Контакти</a></li>
                         </ul>
+                    </div>
+                    <div class="footer__bottom-item footer-social-media">
+                        <div href="" class="footer-social-media__list">
+                            <a href="" class="social-media-icon"
+                                style="background-image: url('assets/images/header/icons8-facebook.svg');"></a>
+                            <a href="" class="social-media-icon"
+                                style="background-image: url('assets/images/header/icons8-instagram.svg');"></a>
+                            <a href="" class="social-media-icon"
+                                style="background-image: url('assets/images/header/icons8-telegram-app.svg');"></a>
+                            <a href="" class="social-media-icon"
+                                style="background-image: url('assets/images/header/icons8-viber.svg');"></a>
+                        </div>
                     </div>
                     <div class="footer__bottom-item schedule">
                         <h3 class="footer-block-subheading">Години роботи</h3>
@@ -848,18 +868,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="footer__bottom-item footer-social-media">
-                        <div href="" class="footer-social-media__list">
-                            <a href="" class="social-media-icon"
-                                style="background-image: url('assets/images/header/icons8-facebook.svg');"></a>
-                            <a href="" class="social-media-icon"
-                                style="background-image: url('assets/images/header/icons8-instagram.svg');"></a>
-                            <a href="" class="social-media-icon"
-                                style="background-image: url('assets/images/header/icons8-telegram-app.svg');"></a>
-                            <a href="" class="social-media-icon"
-                                style="background-image: url('assets/images/header/icons8-viber.svg');"></a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </footer>

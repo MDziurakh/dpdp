@@ -1,5 +1,5 @@
 footer {
-    padding: 40px 0 0;
+    padding-bottom: 20px !important;
     background-color: lighten($color: $brown-logo-color, $amount: 10);
 
     .footer__top {
@@ -27,89 +27,11 @@ footer {
         }
     }
 
-    .footer__middle {
-        padding-bottom: 10px;
-        display: flex;
-        justify-content: space-between;
-        column-gap: 10px;
-
-        .footer__middle-item {
-            border-bottom: 1px solid $blue-logo-color;
-            padding: 15px 0 5px;
-            flex: 1 1 220px;
-            min-width: 180px;
-            max-width: 30%;
-
-            a {
-                font-size: 15px;
-                line-height: 18px;
-                display: inline-flex;
-                align-items: center;
-                &:hover{
-                    text-shadow: 0 0 5px $header-color;
-                }
-            }
-        }
-
-        @media (max-width: 647.98px) {
-            flex-direction: column;
-
-            .footer__middle-item {
-                flex: 1 1 auto;
-                min-width: auto;
-                max-width: none;
-            }
-        }
-    }
-
-    .footer-contact-icon {
-        margin-right: 6px;
-        display: inline-block;
-        height: 30px;
-        width: 30px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        flex: 0 0 30px;
-
-        &.location-icon {
-            background-image: url('../assets/images/header/location-pin-svgrepo-com.svg');
-        }
-
-        &.email-icon {
-            background-image: url('../assets/images/header/mail-svgrepo-com.svg');
-        }
-
-        &.tel-icon {
-            background-image: url('../assets/images/header/phone-svgrepo-com.svg');
-        }
-    }
-
-    .middle__tels {
-        .contact-link-wrapper {
-            display: flex;
-            column-gap: 20px;
-
-            .tels-container {
-                display: flex;
-                flex-direction: column;
-                row-gap: 12px;
-            }
-
-            .tel:hover {
-                text-shadow: 0 0 5px $header-color;
-            }
-
-
-        }
-
-    }
-
     .footer__bottom {
-        padding: 25px 0;
+        padding: 20px 0 0;
         display: flex;
         justify-content: space-between;
-
+        gap: 20px;
         .footer__bottom-item {
             flex: 0 1 23%;
             display: flex;
@@ -138,7 +60,11 @@ footer {
 
             &.schedule {
                 min-width: 273px;
+                @media (max-width:647.98px) {
+                    min-width: auto;
+                }
             }
+
 
             .footer-block-subheading {
                 font-size: 18px;
@@ -178,8 +104,7 @@ footer {
             flex: 0 1 auto;
 
             .footer-social-media__list {
-                padding: 14px 0 0;
-
+                text-align: center;
                 .social-media-icon {
                     height: 40px;
                     width: 40px;
@@ -189,7 +114,7 @@ footer {
 
         @media (max-width: 647.98px) {
             flex-direction: column;
-            padding: 0 0 20px;
+            // padding: 0 0 20px;
             
             .footer__bottom-item {
                 flex: 1 1 auto;
@@ -198,11 +123,11 @@ footer {
             }
             
             .footer-menu__list {
-                padding: 5px 0 20px;
-                columns: 3 200px;
-                @media (max-width: 479.98px) {
-                    columns: 3 140px;
-                }
+                // padding: 5px 0 20px;
+                // columns: 3 200px;
+                // @media (max-width: 479.98px) {
+                    // columns: 3 140px;
+                // }
             }
         }
     }

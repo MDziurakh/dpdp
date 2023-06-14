@@ -3,25 +3,26 @@ $slider-padding: 40px;
 
 .s-our-team-main {
     min-height: 40vh;
-    padding: $slider-padding 0;
+    // padding: $slider-padding 0;//////////////////
     @media (max-width:479.98px) {
-        padding: 20px 0;
+        // padding: 20px 0;
     }
     .our-team__heading {
-        padding: 20px 0;
+        // padding: 20px 0;
         text-align: center;
 
         h2 {
             color: $header-color;
-            text-transform: uppercase;
             font-weight: 400;
             letter-spacing: 1px;
-            // font-family: monospace;
         }
     }
 
     .our-team__slider-container {
         max-width: calc($slider-width*2 + ($slider-padding*2)*2);
+        @media (min-width:1400px) {
+            max-width: none;
+        }
         margin: 0 auto;
 
         [class^="swiper-button-"]::after {
@@ -52,18 +53,6 @@ $slider-padding: 40px;
                 }
             }
 
-        //     &:hover {
-        //         svg {
-        //             border-color: #e1aa4d;
-
-        //             * {
-        //                 transition: all .09s ease-in-out;
-        //                 fill: #e1aa4d;
-        //                 stroke: #e1aa4d;
-
-        //             }
-        //         }
-        //     }
         }
 
     }
@@ -71,8 +60,6 @@ $slider-padding: 40px;
     .swiper-slide {
         padding: 20px 50px;
         background-color: transparent;
-        // height: 549px;
-        // max-width: 320px;
         width: 60%;
 
         @media(max-width:747.98px) {
@@ -89,8 +76,6 @@ $slider-padding: 40px;
                 margin: 0 auto;
             }
 
-            @media(max-width:559.98px) {
-            }
         }
 
         .slider-description {

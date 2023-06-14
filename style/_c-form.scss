@@ -1,21 +1,24 @@
-.form{
+.form {
     background: #FFF;
     padding: 20px;
     border-radius: 10px;
-    h2{
+
+    h2 {
         background: url('../assets/Screenshot_1.png') no-repeat top left;
         background-size: 60px;
         font-size: 20px;
         padding: 14px 65px;
         text-align: center;
         text-transform: none;
-        @media (max-width: 479.98px){
+
+        @media (max-width: 479.98px) {
             font-size: 18px;
             background-size: 54px;
             padding: 14px 58px;
             background-position: left;
         }
-        @media (max-width: 379.98px){
+
+        @media (max-width: 379.98px) {
             font-size: 16px;
             background-size: 34px;
             padding: 14px 40px;
@@ -25,12 +28,14 @@
 }
 
 .contact-form-wrapper {
-    columns: 2 auto;
     text-align: left;
-    
 
-    @media(max-width:747.98px) {
-        columns: 1 auto;
+    .one-line-inputs-container {
+        columns: 2 auto;
+
+        @media(max-width:747.98px) {
+            columns: 1 auto;
+        }
     }
 
     input,
@@ -74,7 +79,8 @@
     textarea {
         background-color: #f7f4f4;
     }
-    input[type='datetime-local']{
+
+    input[type='datetime-local'] {
         padding-right: 20px;
     }
 

@@ -330,6 +330,7 @@
     },
 
     show: function () {
+      document.body.style.overflow = 'hidden';
       if (!this.modalInDom) {
         document.querySelector(this.options.appendTarget).appendChild(this.$el);
         addClass(document.documentElement, this.options.htmlClass);
@@ -412,6 +413,7 @@
     },
 
     close: function () {
+      document.body.style.overflow = 'auto';
       if (this.modalInDom) {
         this.runHook("beforeClose");
         this.removeEvents("lightbox");
@@ -473,10 +475,12 @@
 // // As a JavaScript plugin
 // new SimpleLightbox({
 //     elements: '.gallery a',
+//     disableScroll:true
 //     // more options here
 //   });
-
-// As a jQuery plugin
-$(".gallery a").simpleLightbox({
-  // options here
+  
+  // As a jQuery plugin
+  $(".gallery a").simpleLightbox({
+    // options here
+    
 });

@@ -1,19 +1,13 @@
 .s-contact-us {
-    // background-color: lighten($color: $header-color, $amount: 16);
     background-color: #cecece;
-    padding: 20px 0 40px;
 
     .container {
         text-align: center;
-
-        >.block-heading {
-            padding: 20px 0;
-        }
     }
 
     .map-form-block {
         display: flex;
-        gap: 10px;
+        gap: 20px;
 
         .contact-us-form.form {
             flex: 1 1 50%;
@@ -22,7 +16,6 @@
             .block-subheading {
                 padding: 15px 0;
             }
-
         }
 
         iframe {
@@ -35,13 +28,14 @@
         }
 
     }
-    @media (max-width:747.98px) {
-        .map-form-block{
-            flex-wrap: wrap;   
+
+    @media (max-width:991.98px) {
+        .map-form-block {
+            flex-wrap: wrap;
+
             iframe {
-                height: 300px;
+                height: 350px;
             }
         }
     }
 }
-

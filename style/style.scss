@@ -71,7 +71,8 @@ body {
     background-color: #f9f9f9;
     font-family: 'Gotham';
     height: 100%;
-    &.no-scroll{
+
+    &.no-scroll {
         overflow: hidden;
     }
 
@@ -80,10 +81,19 @@ body {
     }
 }
 
+.section-padding {
+    padding: 75px 0;
+
+    @media (max-width:991.98px) {
+        padding: 50px 0;
+    }
+}
+
 .container {
     margin: 0 auto;
     padding: 0 40px;
     max-width: $large-screen;
+
     @media (max-width:991.98px) {
         padding: 0 20px;
     }
@@ -98,40 +108,31 @@ body {
     font-size: 18px;
     background-color: lighten($color: $header-color, $amount: 10);
     cursor: pointer;
+
     &:hover {
         background-color: $header-color;
     }
 }
 
-.svg-padding{
+.svg-padding {
     margin-right: -5px;
 }
 
 .block-heading {
+    font-size: 30px;
+    padding-bottom: 20px;
     text-align: center;
-    padding-top: 6px;
-    cursor: pointer;
-    border-top: 2px solid transparent;
-    transition: all 0.25s ease-in-out;
     font-weight: 400;
-    text-transform: uppercase;
-    &.no-link{
-        color: black;
-        cursor: auto;
-        border: none;
-        &:hover {
-            color: black;
-            // border-color: ;
-        }
+    color: black;
+    @media (max-width: 991.98px) {
+     font-size: 24px;
     }
-
-    &:hover {
-        color: $hover_color;
-        border-color: $hover_color;
+    @media (max-width: 479.98px) {
+     font-size: 20px;
     }
 }
 
-.block-subheading{
+.block-subheading {
     font-size: 22px;
     line-height: 26px;
     font-weight: 400;
@@ -141,33 +142,35 @@ body {
 
 .wrapper {
     position: relative;
-    // margin: $total-header-height auto 0;
 }
 
 
-.interactive-btn{
+.interactive-btn {
     display: inline-block;
-    // background:linear-gradient(161.33deg, #4D6677 11.43%, rgba(77, 102, 119, 0.46) 74.42%);
     padding: 13px 24px;
     border-radius: 10px;
-    background: linear-gradient(294deg, #3a5e76 100%, rgb(34 89 128 / 100%) 100%);;
+    background: linear-gradient(294deg, #3a5e76 100%, rgb(34 89 128 / 100%) 100%);
     filter: opacity(0.8);
     cursor: pointer;
     color: white;
     text-align: center;
     transition: all 0.3s ease-in-out;
-    @media(max-width:991.98px){
+
+    @media(max-width:991.98px) {
         filter: none;
     }
-    &:hover{
+
+    &:hover {
         filter: none;
     }
-     @media (max-width:1099.98px) {
+
+    @media (max-width:1099.98px) {
         padding: 8px 15px;
         font-size: 14px;
-        
+
     }
-    @media (max-width: 479.98px){
+
+    @media (max-width: 479.98px) {
         font-size: 12px;
-     }
+    }
 }

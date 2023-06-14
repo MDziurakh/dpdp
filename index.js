@@ -2,8 +2,10 @@ const topSwiper = new Swiper(".top-slider", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
+  grabCursor:true,
+  speed:700,
   autoplay: {
-    delay: 4000,
+    delay: 3000,
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -16,6 +18,7 @@ const ourTeamSwiper = new Swiper(".our-team__slider", {
   slidesPerView: 2,
   direction: "horizontal",
   loop: true,
+  speed:500,
   autoplay: {
     delay: 4000,
   },
@@ -24,6 +27,9 @@ const ourTeamSwiper = new Swiper(".our-team__slider", {
   breakpoints: {
     560: {
       slidesPerView: 2,
+    },
+    1400: {
+      slidesPerView: 3,
     },
   },
   navigation: {
