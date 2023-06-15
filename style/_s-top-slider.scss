@@ -91,7 +91,7 @@
             padding: 40px 60px;
             
             @media (max-width:991.98px) {
-                padding: 40px 20px;
+                padding: 40px;
             }
             @media (max-width:479.98px) {
                 width: 100%;
@@ -103,9 +103,9 @@
 
         .caption-block {
             background-color: #14214d85;
-            padding: 20px;
+            padding: 20px 30px;
             text-align: center;
-            max-width: 400px;
+            max-width: 50%;
             width: 100%;
             color: white;
             display: inline-block;

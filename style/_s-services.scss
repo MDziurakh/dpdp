@@ -1,11 +1,5 @@
 .s-serviсes {
-    // padding: 40px 0;//////////////////////////////
     background-color: #eaeaea;
-
-    .block-heading {
-        ///////////////////////////////////////////////
-        // padding: 20px 0;
-    }
 
     .s-services-heading {
         padding-bottom: 80px;
@@ -16,32 +10,46 @@
     }
 
     .services-list {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+        display: grid;
         gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        @media(max-width:991.98px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media(max-width:767.98px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
 
     }
+
     .service-item {
         border-radius: 10px;
         background-color: #f4f4f4;
-        width: 23%;
-        min-width: 245px;
         transition: all .3s ease-in-out;
-        @media(max-width:991.98px){
+        overflow: hidden;
+        
+        @media(max-width:991.98px) {
             min-width: 280px;
         }
+        
         &:hover {
             box-shadow: 0 0px 43px 0px rgba(116, 140, 152, 0.7);
+            .service-item_image-block {
+                transform: scale(1.07);
+                filter: none;
+            }
         }
-
+        
         .service-item_image-block {
             border-radius: 10px 10px 0 0;
-            height: 170px;
+            height: 250px;
             background-size: cover;
-            background-position: center top;
+            background-position: center;
             background-repeat: no-repeat;
-            transition: all .2s ease-in-out;
+            transition: all .4s ease-in-out;
+            @media(min-width:992px) {
+                filter: opacity(0.9);
+            }
         }
     }
 
@@ -52,7 +60,7 @@
     }
 
     .service-item_info-text-block {
-        padding: 10px 10px 20px;
+        padding: 30px 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -61,7 +69,7 @@
     }
 
     .info-heading {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 700;
         padding: 10px 0;
         min-height: 80px;

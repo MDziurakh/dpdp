@@ -95,7 +95,6 @@ footer {
 
             &.footer-menu {
                 max-width: max-content;
-                // flex: 0 1 auto;
             }
 
             .footer-menu__item {
@@ -160,13 +159,8 @@ footer {
 
         }
 
-
-
-       
-
         @media (max-width: 647.98px) {
             flex-direction: column;
-            // padding: 0 0 20px;
 
             .footer__bottom-item {
                 flex: 1 1 auto;
@@ -174,13 +168,6 @@ footer {
                 max-width: none;
             }
 
-            .footer-menu__list {
-                // padding: 5px 0 20px;
-                // columns: 3 200px;
-                // @media (max-width: 479.98px) {
-                // columns: 3 140px;
-                // }
-            }
         }
     }
     .footer-social-media {
