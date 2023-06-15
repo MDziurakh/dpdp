@@ -1,46 +1,42 @@
-window.addEventListener('load', function() {
-  const topSwiper = new Swiper(".top-slider", {
-    // Optional parameters
-    direction: "horizontal",
-    loop: true,
-    grabCursor:true,
-    speed:700,
-    autoplay: {
-      delay: 4000,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-  
-  const ourTeamSwiper = new Swiper(".our-team__slider", {
-    // Optional parameters
-    slidesPerView: 2,
-    direction: "horizontal",
-    loop: true,
-    speed:500,
-    autoplay: {
-      delay: 4000,
-    },
-    // when window width is >= 480px
-    slidesPerView: 1,
-    breakpoints: {
-      560: {
-        slidesPerView: 2,
-      },
-      1400: {
-        slidesPerView: 3,
-      },
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-  
+const topSwiper = new Swiper(".top-slider", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  grabCursor: true,
+  speed: 700,
+  autoplay: {
+    delay: 4000,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });
 
+const ourTeamSwiper = new Swiper(".our-team__slider", {
+  // Optional parameters
+  slidesPerView: 2,
+  direction: "horizontal",
+  loop: true,
+  speed: 500,
+  autoplay: {
+    delay: 4000,
+  },
+  // when window width is >= 480px
+  slidesPerView: 1,
+  breakpoints: {
+    560: {
+      slidesPerView: 2,
+    },
+    1400: {
+      slidesPerView: 3,
+    },
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 const mobileMenu = document.querySelector(".mobile-nav-menu");
 const hamburger = document.querySelector("#hamburger");
@@ -144,12 +140,10 @@ document.addEventListener("click", documentActions);
 function documentActions(e) {
   const targetElement = e.target;
   if (
-    stickyBlock.classList.contains('open') &&
-    targetElement.closest(".open") && 
-    !targetElement.closest(".tel-icon") ||  
-    !targetElement.closest(".open") 
-    // targetElement.closest(".sticky-tel__container") ||
-    // targetElement.closest(".sticky-social-media")
+    (stickyBlock.classList.contains("open") &&
+      targetElement.closest(".open") &&
+      !targetElement.closest(".tel-icon")) ||
+    !targetElement.closest(".open")
   ) {
     stickyBlock.classList.remove("open");
   }
