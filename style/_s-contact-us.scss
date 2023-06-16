@@ -30,12 +30,28 @@
     }
 
     @media (max-width:991.98px) {
+        .contact-form-wrapper .one-line-inputs-container {
+            columns: 1 auto;
+        }
+    }
+
+    @media (max-width:767.98px) {
+        .contact-form-wrapper .one-line-inputs-container {
+            columns: 2 auto;
+        }
+
         .map-form-block {
             flex-wrap: wrap;
 
             iframe {
                 height: 350px;
             }
+        }
+    }
+
+    @media (max-width:481.98px) {
+        .contact-form-wrapper .one-line-inputs-container {
+            columns: 1 auto;
         }
     }
 }

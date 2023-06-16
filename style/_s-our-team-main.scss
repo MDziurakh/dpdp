@@ -3,14 +3,12 @@ $slider-padding: 40px;
 
 .s-our-team-main {
     min-height: 40vh;
-    // padding: $slider-padding 0;//////////////////
-    @media (max-width:479.98px) {
-        // padding: 20px 0;
-    }
+    background-image: url('../assets/images/s-our-team-main/our-team-background.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     .our-team__heading {
-        // padding: 20px 0;
         text-align: center;
-
         h2 {
             color: $header-color;
             font-weight: 400;

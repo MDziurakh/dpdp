@@ -1,16 +1,21 @@
-const topSwiper = new Swiper(".top-slider", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: true,
-  grabCursor: true,
-  speed: 700,
-  autoplay: {
-    delay: 4000,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+window.addEventListener("load", () => {
+  const topSwiper = new Swiper(".top-slider", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: true,
+    grabCursor: true,
+    speed: 700,
+    effect: "fade",
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  return topSwiper
 });
 
 const ourTeamSwiper = new Swiper(".our-team__slider", {
@@ -20,7 +25,8 @@ const ourTeamSwiper = new Swiper(".our-team__slider", {
   loop: true,
   speed: 500,
   autoplay: {
-    delay: 4000,
+    delay: 2500,
+    disableOnInteraction: false,
   },
   // when window width is >= 480px
   slidesPerView: 1,
